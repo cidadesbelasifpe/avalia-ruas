@@ -1,0 +1,32 @@
+{
+  "name": "avalia-ruas",
+  "version": "1.0.0",
+  "description": "projeto de sistema web para coletar avaliação de ruas feita por usuários a partir de imagens das ruas",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cidadesbelasifpe/avalia-ruas.git"
+  },
+  "keywords": [
+    "percepção",
+    "de",
+    "beleza",
+    "segurança",
+    "urbanismo",
+    "javascript",
+    "node"
+  ],
+  "author": "Rafael Mesquita",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cidadesbelasifpe/avalia-ruas/issues"
+  },
+  "homepage": "https://github.com/cidadesbelasifpe/avalia-ruas#readme",
+  "dependencies": {
+    "@google-cloud/storage": "^5.18.2",
+    "firebase-admin": "^10.0.2"
+  }
+}
