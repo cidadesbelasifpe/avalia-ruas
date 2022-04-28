@@ -1,5 +1,7 @@
 import { useState } from "react";
+
 import "./App.css";
+
 
 const questions = [
   {
@@ -13,13 +15,14 @@ const questions = [
   {
     questionText: "...",
     answerOptions: [
-      { image: "...."},
+      { image: getDownloadURL("https://firebasestorage.googleapis.com/v0/b/teste-gabriel-sofia.appspot.com/o/imagens%2Fnaopavimentadas%2Foriginais%2F-7.96459_-34.851980000000005_heading%3D45.png?alt=media&token=e3354a98-1b0a-45e0-9c08-e72b9e0d980b")},
       { image: "...." },
     
     ],
   },
  
 ];
+
 
 function App() {
   const [end, setend] = useState(false);
