@@ -1,5 +1,5 @@
 const db = require('./auth')
-
+const ruaRef = []
 const create = async(data) => {
     const ruaRef = await db.collection('ruas').doc()
     await ruaRef.set(data)
