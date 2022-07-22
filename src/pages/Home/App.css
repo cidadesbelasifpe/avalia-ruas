@@ -4,7 +4,7 @@
   }
   
   body {
-    background-color: #00ff08;
+    background-color: #ffffff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,7 +13,7 @@
   
   .app {
     background-color: #252d4a;
-    width: 450px;
+    width: max-content;
     min-height: 200px;
     height: min-content;
     border-radius: 15px;
@@ -60,7 +60,7 @@
   .answer-section {
     width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
   }
   
