@@ -10,8 +10,8 @@ export const Login = () =>{
     
     function login() {
         loginGoogle();
-
     }
+
     if (!signed) {
         return (
             <div className="app">
@@ -26,9 +26,9 @@ export const Login = () =>{
           </form>
          </div>
         )
-
-    }else{
+    } else{
         return <Navigate to="/home"/>
+
     }
 
 }

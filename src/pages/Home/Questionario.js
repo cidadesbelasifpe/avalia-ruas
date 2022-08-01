@@ -1,10 +1,11 @@
 import { useState, useContext } from "react";
 import React from "react"; 
 import "./App.css";
-import { getDatabase, ref, set, push } from "firebase/database";
+import { getDatabase, ref, set, child, get } from "firebase/database";
 import { app } from "../../services/firebase";
+import {AuthGoogleContext} from "../../contexts/authGoogle"
 
-
+window.location.reload(false);
 
 
 const questions = [
@@ -35,8 +36,9 @@ const questions = [
 
 
 
-export const Home = () =>{
-
+export const Home = () =>{  
+  const {user} = useContext(AuthGoogleContext)
+  let userlog = JSON.parse(user)
   function gravar(userId,pavimentadas, Nao_Pavimentada) {
     const db = getDatabase(app);
     set(ref(db, 'votos/' + userId), {
@@ -54,7 +56,10 @@ export const Home = () =>{
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [escolhaPav,setEscolhaPav] = useState(0);
   const [escolhaUnpav,setEscolhaUnpav] = useState(0);
- 
+
+    
+  
+
   const handleAnswer=(answerOption) => {
 
       if (answerOption==="Pavimentada") {
@@ -74,20 +79,23 @@ export const Home = () =>{
 
  
 if (end) {
-      gravar(escolhaPav*escolhaUnpav+5,escolhaPav,escolhaUnpav)  
-      }
+  const dbRef = ref(getDatabase(app));
+  get(child(dbRef, `votos/${userlog.uid}`)).then((snapshot) => {
+    if (snapshot.exists()) {
+
+    } else {
+      gravar(userlog.uid,escolhaPav,escolhaUnpav) 
+    }
+  }).catch((error) => {
+    console.error(error);
+  });
+    }
  
   return (
-    
     <div className="app">
       {end ? (
         <div className="score-section">
-          Obrigado por responder o formulário
-          <br></br>
-
-         Escolha de Pavimentadas {escolhaPav}
-         <br></br>
-         Escolha de não Pavimentadas {escolhaUnpav}
+          Obrigado {userlog.displayName} por responder o questionário
         </div>
       ) : (
         <>

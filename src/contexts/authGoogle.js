@@ -1,6 +1,8 @@
 import { createContext, useEffect, useState } from "react";
 import { app } from "../services/firebase";
 import { GoogleAuthProvider, getAuth, signInWithPopup  } from "firebase/auth";
+import {Navigate } from "react-router-dom";
+
 const provider = new GoogleAuthProvider();
 
 export const AuthGoogleContext= createContext({})
@@ -11,16 +13,18 @@ export const AuthGoogleProvider=({children})=>{
     const [user, setUser] = useState (null);
     
     useEffect(()=>{
-        const loadStoreAuth = () =>{
+            const loadStoreAuth = () =>{
             const sessionToken = sessionStorage.getItem("@AuthFirebase:token");
             const sessionUser = sessionStorage.getItem("@AuthFirebase:user");
 
             if (sessionToken && sessionUser) {
                 setUser(sessionUser)
             }
-            loadStoreAuth();
         }
+        loadStoreAuth();
+
     },[]);
+
 
     const loginGoogle = ()=>{
         signInWithPopup(auth, provider)
@@ -42,7 +46,7 @@ export const AuthGoogleProvider=({children})=>{
 
     return(
         <AuthGoogleContext.Provider
-            value={{loginGoogle, signed: !!user, user}}
+            value={{loginGoogle, signed: !!user , user}}
         >{children}</AuthGoogleContext.Provider>
     )
 }
