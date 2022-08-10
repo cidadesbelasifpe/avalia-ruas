@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import React,{ useContext } from "react";
 import { AuthGoogleContext } from "../../contexts/authGoogle";
 import {Navigate } from "react-router-dom";
 import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
