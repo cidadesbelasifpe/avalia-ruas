@@ -505,10 +505,9 @@ if (end) {
         <>
           <div className="question-section">
             <div className="question-count">
-              <span>Pergunta número {currentQuestion+1}</span>/{questions.length}
+              <span>Em qual ambiente você se sente mais seguro? {currentQuestion+1}</span>/{questions.length} 
             </div>
           </div>
-
           <div className="answer-section">
            {questions[currentQuestion].answerOptions.map(
               (answerOption) => (

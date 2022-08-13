@@ -35,6 +35,7 @@
   }
   
   .question-count {
+    position: relative;
     margin-bottom: 20px;
   }
   
@@ -61,7 +62,7 @@
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    
   }
   
   button {
@@ -97,3 +98,6 @@
   button svg {
     margin-right: 5px;
   }
+
+ 
+  
