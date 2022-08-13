@@ -16,7 +16,7 @@ export const Login = () =>{
         return (
             <div className="app">
             <form>
-            <h3>Sign In</h3>
+            <h3>Entrar</h3>
             <div className="mb-3">
               <label>Logar com conta Google</label>
             </div>
