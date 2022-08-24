@@ -496,7 +496,7 @@ if (end) {
     }
  
   return (
-    <div className="app">
+    <div className="container">
       {end ? (
         <div className="score-section">
           Obrigado {userlog.displayName} por responder o questionário!
