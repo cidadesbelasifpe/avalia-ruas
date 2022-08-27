@@ -496,31 +496,31 @@ if (end) {
     }
  
   return (
-    <div className="container">
-      {end ? (
-        <div className="score-section">
-          Obrigado {userlog.displayName} por responder o questionário!
-        </div>
-      ) : (
-        <>
-          <div className="question-section">
-            <div className="question-count">
-              <span>Em qual ambiente você se sente mais seguro? {currentQuestion+1}</span>/{questions.length} 
+      <div className="container">
+        {end ? (
+          <div className="score-section">
+            Obrigado {userlog.displayName} por responder o questionário!
+          </div>
+        ) : (
+          <>
+            <div className="question-section">
+              <div className="question-count">
+                <span>Em qual ambiente você se sente mais seguro? {currentQuestion+1}</span>/{questions.length} 
+              </div>
             </div>
-          </div>
-          <div className="answer-section">
-           {questions[currentQuestion].answerOptions.map(
-              (answerOption) => (
-                <button
-                  onClick={() => handleAnswer(answerOption.id_image)}
-                >
-                  {answerOption.image}
-                </button>
-              )
-          )}
-          </div>
-        </>
-      )}
-    </div>
+            <div className="answer-section">
+            {questions[currentQuestion].answerOptions.map(
+                (answerOption) => (
+                  <button
+                    onClick={() => handleAnswer(answerOption.id_image)}
+                  >
+                    {answerOption.image}
+                  </button>
+                )
+            )}
+            </div>
+          </>
+        )}
+      </div>
   );
 }

@@ -1,6 +1,8 @@
 * {
     font-family: "Verdana", cursive, sans-serif;
     color: #ffffff;
+    box-sizing: border-box;
+
   }
   
   body {
@@ -10,7 +12,61 @@
     align-items: center;
     min-height: 100vh;
   }
-  
+
+/* Create four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+  padding: 20px;
+}
+
+/* On screens that are 992px wide or less, go from four columns to two columns */
+@media screen and (max-width: 992px) {
+  .answer-section {
+    flex-direction: column;
+  }
+  .question-section {
+    width: 5%;
+    position: relative;
+    padding-left: 5%;
+
+  }
+  img{
+    max-width: 1080px;   /* Máximo da largura da imagem */
+    width: 100%;
+    max-height: 500px;  /* Máximo da altura da imagem */
+    min-height: auto;      /* Mínimo da altura, por padrão “auto” */
+    background-size:100%;
+    background-repeat: no-repeat;
+  }
+  .question-count span {
+    font-size: calc(1rem + 3vw);
+
+  }
+}
+
+/* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .answer-section {
+    flex-direction: column;
+  }
+  .question-section {
+    width: 5%;
+    position: relative;
+    padding-left: 5%;
+  }
+  img{
+      max-width: 1080px;   /* Máximo da largura da imagem */
+      width: 100%;
+      max-height: 500px;  /* Máximo da altura da imagem */
+      min-height: auto;      /* Mínimo da altura, por padrão “auto” */
+      background-size:100%;
+      background-repeat: no-repeat;
+  }
+  .question-count span {
+    font-size: calc(1rem + 3vw);
+  }
+}
   .container {
     background-color: #252d4a;
     width: max-content;
@@ -19,7 +75,6 @@
     border-radius: 15px;
     padding: 20px;
     box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
-    
     justify-content: space-evenly;
   }
   
@@ -41,12 +96,13 @@
   
   .question-count span {
     font-size: 28px;
+
   }
   
   .question-text {
     margin-bottom: 12px;
   }
-  
+ 
   .timer-text {
     background: rgb(230, 153, 12);
     padding: 15px;
@@ -61,12 +117,11 @@
   .answer-section {
     width: 100%;
     display: flex;
-    flex-direction: row;
     
   }
   
   button {
-    width: 100%;
+    max-width: 100%;
     font-size: 16px;
     color: #ffffff;
     background-color: #252d4a;
@@ -79,13 +134,6 @@
     cursor: pointer;
   }
   
-  .correct {
-    background-color: #2f922f;
-  }
-  
-  .incorrect {
-    background-color: #ff3333;
-  }
   
   button:hover {
     background-color: #555e7d;
