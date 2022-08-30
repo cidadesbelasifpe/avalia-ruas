@@ -4,611 +4,612 @@ import "./App.css";
 import { getDatabase, ref, set, child, get } from "firebase/database";
 import { app } from "../../services/firebase";
 import {AuthGoogleContext} from "../../contexts/authGoogle"
-import A1_2 from '../../CidadesInteligentes/tela 1/A1_2.png'
-import apoioF_2 from '../../CidadesInteligentes/tela 1/apoioF_2.png'
-//Tela 2
-import apoioA_1 from '../../CidadesInteligentes/tela 2/apoioA_1.png'
-import GH1_1 from '../../CidadesInteligentes/tela 2/GH1_1.png'
-//Tela 3
-import apoiol_2 from '../../CidadesInteligentes/tela 3/apoiol_2.png'
-import E1_2 from '../../CidadesInteligentes/tela 3/E1_2.png'
-//Tela 4
-import K1_2 from '../../CidadesInteligentes/tela 4/K1_2.png'
-import L2_2 from '../../CidadesInteligentes/tela 4/L2_2.png'
-//Tela 5
-import apoioU_2 from '../../CidadesInteligentes/tela 5/apoioU_2.png'
-import Q2_2 from '../../CidadesInteligentes/tela 5/Q2_2.png'
-//Tela 6
-import apoioH_2 from '../../CidadesInteligentes/tela 6/apoioH_2.png'
-import T2_2 from '../../CidadesInteligentes/tela 6/T2_2.png'
-//Tela 7
-import R1_apoio_1 from '../../CidadesInteligentes/tela 7/R1_apoio_1.png'
-import M1_1 from '../../CidadesInteligentes/tela 7/M1_1.png'
-//Tela 8
-import apoioL_1 from '../../CidadesInteligentes/tela 8/apoioL_1.png'
-import W2_1 from '../../CidadesInteligentes/tela 8/W2_1.png'
-//Tela 9
-import apoioK_1 from '../../CidadesInteligentes/tela 9/apoioK_1.png'
-import CD1_1 from '../../CidadesInteligentes/tela 9/CD1_1.png'
-//Tela 10
-import Q2_2Tela10 from '../../CidadesInteligentes/tela 10/Q2_2.png'
-import G1_1 from '../../CidadesInteligentes/tela 10/G1_1.png'
-//Tela 11
-import Q2_1 from '../../CidadesInteligentes/tela 11/Q2_1.png'
-import R1_1 from '../../CidadesInteligentes/tela 11/R1_1.png'
-//Tela 12
-import D1_1 from '../../CidadesInteligentes/tela 12/D1_1.png'
-import S2_2 from '../../CidadesInteligentes/tela 12/S2_2.png'
-//Tela 13
-import N2_2 from '../../CidadesInteligentes/tela 13/N2_2.png'
-import R1_apoio from '../../CidadesInteligentes/tela 13/R1_apoio.png'
-//Tela 14
-import apoioG_2Tela14 from '../../CidadesInteligentes/tela 14/apoioG_2.png'
-import C2_2 from '../../CidadesInteligentes/tela 14/C2_2.png'
-//Tela 15
-import A1_1 from '../../CidadesInteligentes/tela 15/A1_1.png'
-import apoioC_1 from '../../CidadesInteligentes/tela 15/apoioC_1.png'
-//Tela 16
-import apoioN_2 from '../../CidadesInteligentes/tela 16/apoioN_2.png'
-import G1_2 from '../../CidadesInteligentes/tela 16/G1_2.png'
-//Tela 17
-import apoioC_2 from '../../CidadesInteligentes/tela 17/apoioC_2.png'
-import H2_2 from '../../CidadesInteligentes/tela 17/H2_2.png'
-//Tela 18
-import apoioS_2 from '../../CidadesInteligentes/tela 18/apoioS_2.png'
-import O1_2 from '../../CidadesInteligentes/tela 18/O1_2.png'
-//Tela 19
-import apoioU_2Tela19 from '../../CidadesInteligentes/tela 19/apoioU_2.png'
-import Q1_2 from '../../CidadesInteligentes/tela 19/Q1_2.png'
-//Tela 20
-import C2_1 from '../../CidadesInteligentes/tela 20/C2_1.png'
-import D2_1 from '../../CidadesInteligentes/tela 20/D2_1.png'
-//Tela 21
-import apoioG_1 from '../../CidadesInteligentes/tela 21/apoioG_1.png'
-import E2_1 from '../../CidadesInteligentes/tela 21/E2_1.png'
-//Tela 22
-import apoioJ_1 from '../../CidadesInteligentes/tela 22/apoioJ_1.png'
-import O2_1 from '../../CidadesInteligentes/tela 22/O2_1.png'
-//Tela 23
-import MN1_1 from '../../CidadesInteligentes/tela 23/MN1_1.png'
-import apoioB_1 from '../../CidadesInteligentes/tela 23/apoioB_1.png'
-//Tela 24
-import Q1_1 from '../../CidadesInteligentes/tela 24/Q1_1.png'
-import R1_1Tela24 from '../../CidadesInteligentes/tela 24/R1_1.png'
-//Tela 25
-import IJ1_1 from '../../CidadesInteligentes/tela 25/IJ1_1.png'
-import apoioM_1 from '../../CidadesInteligentes/tela 25/apoioM_1.png'
-//Tela 26
-import A2_2 from '../../CidadesInteligentes/tela 26/apoioJ_1.png'
-import apoioF_2Tela26 from '../../CidadesInteligentes/tela 26/apoioF_2.png'
-//Tela 27
-import D1_1Tela27 from '../../CidadesInteligentes/tela 27/D1_1Tela27.png'
-import S1_2 from '../../CidadesInteligentes/tela 27/S1_2.png'
-//Tela 28
-import N1_2 from '../../CidadesInteligentes/tela 28/N1_2.png'
-import R1_2 from '../../CidadesInteligentes/tela 28/R1_2.png'
-//Tela 29
-import C1_2 from '../../CidadesInteligentes/tela 29/C1_2.png'
-import ApoioG_2 from '../../CidadesInteligentes/tela 29/ApoioG_2.png'
-//Tela 30
-import apoioN_1 from '../../CidadesInteligentes/tela 30/apoioN_1.png'
-import B2_1 from '../../CidadesInteligentes/tela 30/B2_1.png'
-//Tela 31
-import apoioL_2 from '../../CidadesInteligentes/tela31/apoioL_2.png'
-import F1_2 from '../../CidadesInteligentes/tela31/F1_2.png'
-//Tela 32
-import apoioC_2Tela32 from '../../CidadesInteligentes/tela32/apoioC_2.png'
-import H1_2 from '../../CidadesInteligentes/tela32/H1_2.png'
-//Tela 33
-import L1_2 from '../../CidadesInteligentes/tela33/L1_2.png'
-import K1_2Tela33 from '../../CidadesInteligentes/tela33/K1_2.png'
-//Tela 34
-import apoioA_1Tela34 from '../../CidadesInteligentes/tela34/apoioA_1.png'
-import GH2_1 from '../../CidadesInteligentes/tela34/GH2_1.png'
-//Tela 35
-import A2_1 from '../../CidadesInteligentes/tela35/A2_1.png'
-import apoioC_1Tela35 from '../../CidadesInteligentes/tela35/apoioC_1.png'
-//Tela 36
-import apoioB_2 from '../../CidadesInteligentes/tela36/apoioB_2.png'
-import D2_2 from '../../CidadesInteligentes/tela36/D2_2.png'
-//Tela 37
-import apoioS_2Tela37 from '../../CidadesInteligentes/tela 37/apoioS_2.png'
-import O2_2 from '../../CidadesInteligentes/tela 37/O2_2.png'
-//Tela 38
-import C1_1 from '../../CidadesInteligentes/tela 38/C1_1.png'
-import D2_1Tela38 from '../../CidadesInteligentes/tela 38/D2_1.png'
-//Tela 39
-import apoioN_1Tela39 from '../../CidadesInteligentes/tela 39/apoioN_1.png'
-import B1_1 from '../../CidadesInteligentes/tela 39/B1_1.png'
-//Tela 40
-import apoioI_2 from '../../CidadesInteligentes/tela 40/apoioI_2.png'
-import E1_2Tela40 from '../../CidadesInteligentes/tela 40/E1_2.png'
-//Tela 41
-import apoioL_2Tela41 from '../../CidadesInteligentes/tela 41/apoioL_2.png'
-import F2_2 from '../../CidadesInteligentes/tela 41/F2_2.png'
-//Tela 42
-import apoioK_2 from '../../CidadesInteligentes/tela 42/apoioK_2.png'
-import M1_2 from '../../CidadesInteligentes/tela 42/M1_2.png'
-//Tela 43
-import apoioG_1Tela43 from '../../CidadesInteligentes/tela 43/apoioG_1.png'
-import E1_1 from '../../CidadesInteligentes/tela 43/E1_1.png'
-//Tela 44
-import apoioJ_1Tela44 from '../../CidadesInteligentes/tela 44/apoioJ_1.png'
-import O1_1 from '../../CidadesInteligentes/tela 44/O1_1.png'
-//Tela 45
-import apoioL_1Tela45 from '../../CidadesInteligentes/tela 45/apoioL_1.png'
-import W1_1 from '../../CidadesInteligentes/tela 45/W1_1.png'
-//Tela 46
-import G2_1 from '../../CidadesInteligentes/tela 46/G2_1.png'
-import apoioH_1 from '../../CidadesInteligentes/tela 46/apoioH_1.png'
-//Tela 47
-import apoioB_1Tela47 from '../../CidadesInteligentes/tela 47/apoioB_1.png'
-import MN2_1 from '../../CidadesInteligentes/tela 47/MN2_1.png'
-//Tela 48
-import apoioM_1Tela48 from '../../CidadesInteligentes/tela 48/apoioM_1.png'
-import IJ2_1 from '../../CidadesInteligentes/tela 48/IJ2_1.png'
-//Tela 49
-import apoioB_2Tela49 from '../../CidadesInteligentes/tela 49/apoioB_2.png'
-import D1_2 from '../../CidadesInteligentes/tela 49/D1_2.png'
-//Tela 50
-import apoioN_2Tela50 from '../../CidadesInteligentes/tela 50/apoioN_2.png'
-import G2_2 from '../../CidadesInteligentes/tela 50/G2_2.png'
-//Tela 51
-import J1_2 from '../../CidadesInteligentes/tela 51/J1_2.png'
-import K2_2 from '../../CidadesInteligentes/tela 51/K2_2.png'
-//Tela 52
-import apoioK_2Tela52 from '../../CidadesInteligentes/tela 52/apoioK_2.png'
-import M2_2 from '../../CidadesInteligentes/tela 52/M2_2.png'
-//Tela 53
-import apoioH_2Tela53 from '../../CidadesInteligentes/tela 53/apoioH_2.png'
-import T1_2 from '../../CidadesInteligentes/tela 53/T1_2.png'
-//Tela 54
-import apoioQ_1 from '../../CidadesInteligentes/tela 54/apoioQ_1.png'
-import U1_2 from '../../CidadesInteligentes/tela 54/U1_2.png'
-//Tela 55
-import F1_1 from '../../CidadesInteligentes/tela 55/F1_1.png'
-import M1_1Tela55 from '../../CidadesInteligentes/tela 55/M1_1.png'
-//Tela 56
-import apoioI_1 from '../../CidadesInteligentes/tela 56/apoioI_1.png'
-import Z1_1 from '../../CidadesInteligentes/tela 56/Z1_1.png'
-//Tela 57
-import J2_2 from '../../CidadesInteligentes/tela 57/J2_2.png'
-import K2_2Tela57 from '../../CidadesInteligentes/tela 57/K2_2.png'
-//Tela 58
-import apoioQ_1Tela58 from '../../CidadesInteligentes/tela 58/apoioQ_1.png'
-import U2_2 from '../../CidadesInteligentes/tela 58/U2_2.png'
-//Tela 59
-import apoioK_1Tela59 from '../../CidadesInteligentes/tela 59/apoioK_1.png'
-import CD2_1 from '../../CidadesInteligentes/tela 59/CD2_1.png'
-//Tela 60
-import apoioI_1Tela60 from '../../CidadesInteligentes/tela 60/apoioI_1.png'
-import Z2_1 from '../../CidadesInteligentes/tela 60/Z2_1.png'
+
+import a1_2 from '../../cidadesinteligentes/tela1/A1_2.png'
+import apoiof_2 from '../../cidadesinteligentes/tela1/apoioF_2.png'
+//tela 2
+import apoioa_1 from '../../cidadesinteligentes/tela2/apoioA_1.png'
+import gh1_1 from '../../cidadesinteligentes/tela2/GH1_1.png'
+//tela 3
+import apoiol_2 from '../../cidadesinteligentes/tela3/apoioI_2.png'
+import e1_2 from '../../cidadesinteligentes/tela3/E1_2.png'
+//tela 4
+import k1_2 from '../../cidadesinteligentes/tela4/K1_2.png'
+import l2_2 from '../../cidadesinteligentes/tela4/L2_2.png'
+//tela 5
+import apoiou_2 from '../../cidadesinteligentes/tela5/apoioU_2.png'
+import q2_2 from '../../cidadesinteligentes/tela5/Q2_2.png'
+//tela 6
+import apoioh_2 from '../../cidadesinteligentes/tela6/apoioH_2.png'
+import t2_2 from '../../cidadesinteligentes/tela6/T2_2.png'
+//tela 7
+import r1_apoio_1 from '../../cidadesinteligentes/tela7/F2_1.png'
+import m1_1 from '../../cidadesinteligentes/tela7/M1_1.png'
+//tela 8
+import apoiol_1 from '../../cidadesinteligentes/tela8/apoioL_1.png'
+import w2_1 from '../../cidadesinteligentes/tela8/W2_1.png'
+//tela 9
+import apoiok_1 from '../../cidadesinteligentes/tela9/apoioK_1.png'
+import cd1_1 from '../../cidadesinteligentes/tela9/CD1_1.png'
+//tela 10
+import apoioh_1tela10 from '../../cidadesinteligentes/tela10/apoioH_1.png'
+import g1_1 from '../../cidadesinteligentes/tela10/G1_1.png'
+//tela 11
+import q2_1 from '../../cidadesinteligentes/tela11/Q2_1.png'
+import r1_1 from '../../cidadesinteligentes/tela11/R1_1.png'
+//tela 12
+import d1_1 from '../../cidadesinteligentes/tela12/D1_1.png'
+import s2_2 from '../../cidadesinteligentes/tela12/S2_2.png'
+//tela 13
+import n2_2 from '../../cidadesinteligentes/tela13/N2_2.png'
+import r1_apoio from '../../cidadesinteligentes/tela13/R1_apoio.png'
+//tela 14
+import apoiog_2tela14 from '../../cidadesinteligentes/tela14/apoioG_2.png'
+import c2_2 from '../../cidadesinteligentes/tela14/C2_2.png'
+//tela 15
+import a1_1 from '../../cidadesinteligentes/tela15/A1_1.png'
+import apoioc_1 from '../../cidadesinteligentes/tela15/apoioC_1.png'
+//tela 16
+import apoion_2 from '../../cidadesinteligentes/tela16/apoioN_2.png'
+import g1_2 from '../../cidadesinteligentes/tela16/G1_2.png'
+//tela 17
+import apoioc_2 from '../../cidadesinteligentes/tela17/apoioC_2.png'
+import h2_2 from '../../cidadesinteligentes/tela17/H2_2.png'
+//tela 18
+import apoios_2 from '../../cidadesinteligentes/tela18/apoioS_2.png'
+import o1_2 from '../../cidadesinteligentes/tela18/O1_2.png'
+//tela 19
+import apoiou_2tela19 from '../../cidadesinteligentes/tela19/apoioU_2.png'
+import q1_2 from '../../cidadesinteligentes/tela19/Q1_2.png'
+//tela 20
+import c2_1 from '../../cidadesinteligentes/tela20/C2_1.png'
+import d2_1 from '../../cidadesinteligentes/tela20/D2_1.png'
+//tela 21
+import apoiog_1 from '../../cidadesinteligentes/tela21/apoioG_1.png'
+import e2_1 from '../../cidadesinteligentes/tela21/E2_1.png'
+//tela 22
+import apoioj_1 from '../../cidadesinteligentes/tela22/apoioJ_1.png'
+import o2_1 from '../../cidadesinteligentes/tela22/O2_1.png'
+//tela 23
+import mn1_1 from '../../cidadesinteligentes/tela23/MN1_1.png'
+import apoiob_1 from '../../cidadesinteligentes/tela23/apoioB_1.png'
+//tela 24
+import q1_1 from '../../cidadesinteligentes/tela24/Q1_1.png'
+import r1_1tela24 from '../../cidadesinteligentes/tela24/R1_1.png'
+//tela 25
+import ij1_1 from '../../cidadesinteligentes/tela25/IJ1_1.png'
+import apoiom_1 from '../../cidadesinteligentes/tela25/apoioM_1.png'
+//tela 26
+import a2_2 from '../../cidadesinteligentes/tela26/A2_2.png'
+import apoiof_2tela26 from '../../cidadesinteligentes/tela26/apoioF_2.png'
+//tela 27
+import d1_1tela27 from '../../cidadesinteligentes/tela27/D1_1.png'
+import s1_2 from '../../cidadesinteligentes/tela27/S1_2.png'
+//tela 28
+import n1_2 from '../../cidadesinteligentes/tela28/N1_2.png'
+import r1_2 from '../../cidadesinteligentes/tela28/R1_2.png'
+//tela 29
+import c1_2 from '../../cidadesinteligentes/tela29/C1_2.png'
+import apoiog_2 from '../../cidadesinteligentes/tela29/apoioG_2.png'
+//tela 30
+import apoion_1 from '../../cidadesinteligentes/tela30/apoioN_1.png'
+import b2_1 from '../../cidadesinteligentes/tela30/B2_1.png'
+//tela 31
+import apoiol_2tela31 from '../../cidadesinteligentes/tela31/apoioL_2.png'
+import f1_2 from '../../cidadesinteligentes/tela31/F1_2.png'
+//tela 32
+import apoioc_2tela32 from '../../cidadesinteligentes/tela32/apoioC_2.png'
+import h1_2 from '../../cidadesinteligentes/tela32/H1_2.png'
+//tela 33
+import l1_2 from '../../cidadesinteligentes/tela33/L1_2.png'
+import k1_2tela33 from '../../cidadesinteligentes/tela33/K1_2.png'
+//tela 34
+import apoioa_1tela34 from '../../cidadesinteligentes/tela34/apoioA_1.png'
+import gh2_1 from '../../cidadesinteligentes/tela34/GH2_1.png'
+//tela 35
+import a2_1 from '../../cidadesinteligentes/tela35/A2_1.png'
+import apoioc_1tela35 from '../../cidadesinteligentes/tela35/apoioC_1.png'
+//tela 36
+import apoiob_2 from '../../cidadesinteligentes/tela36/apoioB_2.png'
+import d2_2 from '../../cidadesinteligentes/tela36/D2_2.png'
+//tela 37
+import apoios_2tela37 from '../../cidadesinteligentes/tela37/apoioS_2.png'
+import o2_2 from '../../cidadesinteligentes/tela37/O2_2.png'
+//tela 38
+import c1_1 from '../../cidadesinteligentes/tela38/C1_1.png'
+import d2_1tela38 from '../../cidadesinteligentes/tela38/D2_1.png'
+//tela 39
+import apoion_1tela39 from '../../cidadesinteligentes/tela39/apoioN_1.png'
+import b1_1 from '../../cidadesinteligentes/tela39/B1_1.png'
+//tela 40
+import apoioi_2 from '../../cidadesinteligentes/tela40/apoioI_2.png'
+import e1_2tela40 from '../../cidadesinteligentes/tela40/E1_2.png'
+//tela 41
+import apoiol_2tela41 from '../../cidadesinteligentes/tela41/apoioL_2.png'
+import f2_2 from '../../cidadesinteligentes/tela41/F2_2.png'
+//tela 42
+import apoiok_2 from '../../cidadesinteligentes/tela42/apoioK_2.png'
+import m1_2 from '../../cidadesinteligentes/tela42/M1_2.png'
+//tela 43
+import apoiog_1tela43 from '../../cidadesinteligentes/tela43/apoioG_1.png'
+import e1_1 from '../../cidadesinteligentes/tela43/E1_1.png'
+//tela 44
+import apoioj_1tela44 from '../../cidadesinteligentes/tela44/apoioJ_1.png'
+import o1_1 from '../../cidadesinteligentes/tela44/O1_1.png'
+//tela 45
+import apoiol_1tela45 from '../../cidadesinteligentes/tela45/apoioL_1.png'
+import w1_1 from '../../cidadesinteligentes/tela45/W1_1.png'
+//tela 46
+import g2_1 from '../../cidadesinteligentes/tela46/G2_1.png'
+import apoioh_1 from '../../cidadesinteligentes/tela46/apoioH_1.png'
+//tela 47
+import apoiob_1tela47 from '../../cidadesinteligentes/tela47/apoioB_1.png'
+import mn2_1 from '../../cidadesinteligentes/tela47/MN2_1.png'
+//tela 48
+import apoiom_1tela48 from '../../cidadesinteligentes/tela48/apoioM_1.png'
+import ij2_1 from '../../cidadesinteligentes/tela48/IJ2_1.png'
+//tela 49
+import apoiob_2tela49 from '../../cidadesinteligentes/tela49/apoioB_2.png'
+import d1_2 from '../../cidadesinteligentes/tela49/D1_2.png'
+//tela 50
+import apoion_2tela50 from '../../cidadesinteligentes/tela50/apoioN_2.png'
+import g2_2 from '../../cidadesinteligentes/tela50/G2_2.png'
+//tela 51
+import j1_2 from '../../cidadesinteligentes/tela51/J1_2.png'
+import k2_2 from '../../cidadesinteligentes/tela51/K2_2.png'
+//tela 52
+import apoiok_2tela52 from '../../cidadesinteligentes/tela52/apoioK_2.png'
+import m2_2 from '../../cidadesinteligentes/tela52/M2_2.png'
+//tela 53
+import apoioh_2tela53 from '../../cidadesinteligentes/tela53/apoioH_2.png'
+import t1_2 from '../../cidadesinteligentes/tela53/T1_2.png'
+//tela 54
+import apoioq_1 from '../../cidadesinteligentes/tela54/apoioQ_1.png'
+import u1_2 from '../../cidadesinteligentes/tela54/U1_2.png'
+//tela 55
+import f1_1 from '../../cidadesinteligentes/tela55/F1_1.png'
+import m1_1tela55 from '../../cidadesinteligentes/tela55/M1_1.png'
+//tela 56
+import apoioi_1 from '../../cidadesinteligentes/tela56/apoioI_1.png'
+import z1_1 from '../../cidadesinteligentes/tela56/Z1_1.png'
+//tela 57
+import j2_2 from '../../cidadesinteligentes/tela57/J2_2.png'
+import k2_2tela57 from '../../cidadesinteligentes/tela57/K2_2.png'
+//tela 58
+import apoioq_1tela58 from '../../cidadesinteligentes/tela58/apoioQ_1.png'
+import u2_2 from '../../cidadesinteligentes/tela58/U2_2.png'
+//tela 59
+import apoiok_1tela59 from '../../cidadesinteligentes/tela59/apoioK_1.png'
+import cd2_1 from '../../cidadesinteligentes/tela59/CD2_1.png'
+//tela 60
+import apoioi_1tela60 from '../../cidadesinteligentes/tela60/apoioI_1.png'
+import z2_1 from '../../cidadesinteligentes/tela60/Z2_1.png'
 
 const questions = [
   {
-    answerOptions: [
-      {image: <img src= {A1_2}/>,id_image:"A1_2"},
-      {image: <img src= {apoioF_2}/>, id_image:"apoioF_2"}
+    answeroptions: [
+      {image: <img src= {a1_2}/>,id_image:"a1_2"},
+      {image: <img src= {apoiof_2}/>, id_image:"apoiof_2"}
 
     ],
   },
   {
-    answerOptions: [
-      {image: <img src= {apoioA_1}/>,id_image:"apoioA_1"},
-      {image: <img src= {GH1_1}/>, id_image:"GH1_1"}
+    answeroptions: [
+      {image: <img src= {apoioa_1}/>,id_image:"apoioa_1"},
+      {image: <img src= {gh1_1}/>, id_image:"gh1_1"}
 
     ],
   },
   {
-    answerOptions: [
+    answeroptions: [
       {image: <img src= {apoiol_2}/>,id_image:"apoiol_2"},
-      {image: <img src= {E1_2}/>, id_image:"E1_2"}
+      {image: <img src= {e1_2}/>, id_image:"e1_2"}
 
     ],
   },
  {
-    answerOptions: [
-      {image: <img src= {K1_2}/>,id_image:"K1_2"},
-      {image: <img src= {L2_2}/>, id_image:"L2_2"}
+    answeroptions: [
+      {image: <img src= {k1_2}/>,id_image:"k1_2"},
+      {image: <img src= {l2_2}/>, id_image:"l2_2"}
      
     ],
   },
   {
-    answerOptions: [
-      {image: <img src= {apoioU_2}/>,id_image:"apoioU_2"},
-      {image: <img src= {Q2_2}/>, id_image:"Q2_2"}
+    answeroptions: [
+      {image: <img src= {apoiou_2}/>,id_image:"apoiou_2"},
+      {image: <img src= {q2_2}/>, id_image:"q2_2"}
      
     ],
   },
   {
-    answerOptions: [
-      {image: <img src= {apoioH_2}/>,id_image:"apoioH_2"},
-      {image: <img src= {T2_2}/>, id_image:"T2_2"}
+    answeroptions: [
+      {image: <img src= {apoioh_2}/>,id_image:"apoioh_2"},
+      {image: <img src= {t2_2}/>, id_image:"t2_2"}
      
     ],
   },
   {
-    answerOptions: [
-      {image: <img src= {R1_apoio_1}/>,id_image:"R1_apoio_1"},
-      {image: <img src= {M1_1}/>, id_image:"M1_1"}
+    answeroptions: [
+      {image: <img src= {r1_apoio_1}/>,id_image:"r1_apoio_1"},
+      {image: <img src= {m1_1}/>, id_image:"m1_1"}
      
     ],
   },
   {
-    answerOptions: [
-      {image: <img src= {apoioL_1}/>,id_image:"apoioL_1"},
-      {image: <img src= {W2_1}/>, id_image:"W2_1"}
+    answeroptions: [
+      {image: <img src= {apoiol_1}/>,id_image:"apoiol_1"},
+      {image: <img src= {w2_1}/>, id_image:"w2_1"}
      
     ],
   },
   {
-    answerOptions: [
-      {image: <img src= {apoioK_1}/>,id_image:"apoioK_1"},
-      {image: <img src= {CD1_1}/>, id_image:"CD1_1"}
+    answeroptions: [
+      {image: <img src= {apoiok_1}/>,id_image:"apoiok_1"},
+      {image: <img src= {cd1_1}/>, id_image:"cd1_1"}
      
     ],
   },
   {
-    answerOptions: [
-      {image: <img src= {Q2_2Tela10}/>,id_image:"Q2_2Tela10"},
-      {image: <img src= {G1_1}/>, id_image:"G1_1"}
+    answeroptions: [
+      {image: <img src= {apoioh_1tela10}/>,id_image:"apoioh_1tela10"},
+      {image: <img src= {g1_1}/>, id_image:"g1_1"}
      
     ],
   },
   {
-    answerOptions: [
-      {image: <img src= {Q2_1}/>,id_image:"Q2_1"},
-      {image: <img src= {R1_1}/>, id_image:"R1_1"}
+    answeroptions: [
+      {image: <img src= {q2_1}/>,id_image:"q2_1"},
+      {image: <img src= {r1_1}/>, id_image:"r1_1"}
      
     ],
   },
   {
-    answerOptions: [
-      {image: <img src= {D1_1}/>,id_image:"D1_1"},
-      {image: <img src= {S2_2}/>, id_image:"S2_2"}
+    answeroptions: [
+      {image: <img src= {d1_1}/>,id_image:"d1_1"},
+      {image: <img src= {s2_2}/>, id_image:"s2_2"}
      
     ],
   },
   {
-    answerOptions: [
-      {image: <img src= {N2_2}/>,id_image:"N2_2"},
-      {image: <img src= {R1_apoio}/>, id_image:"R1_apoio"}
+    answeroptions: [
+      {image: <img src= {n2_2}/>,id_image:"n2_2"},
+      {image: <img src= {r1_apoio}/>, id_image:"r1_apoio"}
      
     ],
   },
   {
-    answerOptions: [
-      {image: <img src= {apoioG_2Tela14}/>,id_image:"apoioG_2Tela14"},
-      {image: <img src= {C2_2}/>, id_image:"C2_2"}
+    answeroptions: [
+      {image: <img src= {apoiog_2tela14}/>,id_image:"apoiog_2tela14"},
+      {image: <img src= {c2_2}/>, id_image:"c2_2"}
      
     ],
   },
   {
-    answerOptions: [
-      {image: <img src= {apoioG_2}/>,id_image:"apoioG_2"},
-      {image: <img src= {C1_2}/>, id_image:"C1_2"}
+    answeroptions: [
+      {image: <img src= {apoiog_2}/>,id_image:"apoiog_2"},
+      {image: <img src= {c1_2}/>, id_image:"c1_2"}
      
     ],
   },
   {
-    answerOptions: [
-      {image: <img src= {A1_1}/>,id_image:"A1_1"},
-      {image: <img src= {apoioC_1}/>, id_image:"apoioC_1"}
+    answeroptions: [
+      {image: <img src= {a1_1}/>,id_image:"a1_1"},
+      {image: <img src= {apoioc_1}/>, id_image:"apoioc_1"}
      
     ],
   },
   {
-    answerOptions: [
-      {image: <img src= {apoioN_2}/>,id_image:"apoioN_2"},
-      {image: <img src= {G1_2}/>, id_image:"G1_2"}
+    answeroptions: [
+      {image: <img src= {apoion_2}/>,id_image:"apoion_2"},
+      {image: <img src= {g1_2}/>, id_image:"g1_2"}
      
     ],
   },
   {
-    answerOptions: [
-      {image: <img src= {apoioC_2}/>,id_image:"apoioC_2"},
-      {image: <img src= {H2_2}/>, id_image:"H2_2"}
+    answeroptions: [
+      {image: <img src= {apoioc_2}/>,id_image:"apoioc_2"},
+      {image: <img src= {h2_2}/>, id_image:"h2_2"}
      
     ],
   },
   {
-    answerOptions: [
-      {image: <img src= {apoioS_2}/>,id_image:"apoioS_2"},
-      {image: <img src= {O1_2}/>, id_image:"O1_2"}
+    answeroptions: [
+      {image: <img src= {apoios_2}/>,id_image:"apoios_2"},
+      {image: <img src= {o1_2}/>, id_image:"o1_2"}
      
     ],
   },
   {
-    answerOptions: [
-      {image: <img src= {apoioU_2Tela19}/>,id_image:"apoioU_2Tela19"},
-      {image: <img src= {Q1_2}/>, id_image:"Q1_2"}
+    answeroptions: [
+      {image: <img src= {apoiou_2tela19}/>,id_image:"apoiou_2tela19"},
+      {image: <img src= {q1_2}/>, id_image:"q1_2"}
      
     ],
   },
   {
-    answerOptions: [
-      {image: <img src= {C2_1}/>,id_image:"C2_1"},
-      {image: <img src= {D2_1}/>, id_image:"D2_1"}
+    answeroptions: [
+      {image: <img src= {c2_1}/>,id_image:"c2_1"},
+      {image: <img src= {d2_1}/>, id_image:"d2_1"}
      
     ],
   },
   {
-    answerOptions: [
-      {image: <img src= {apoioG_1}/>,id_image:"apoioG_1"},
-      {image: <img src= {E2_1}/>, id_image:"E2_1"}
+    answeroptions: [
+      {image: <img src= {apoiog_1}/>,id_image:"apoiog_1"},
+      {image: <img src= {e2_1}/>, id_image:"e2_1"}
      
     ],
   },
   {
-    answerOptions: [
-      {image: <img src= {apoioJ_1}/>,id_image:"apoioJ_1"},
-      {image: <img src= {O2_1}/>, id_image:"O2_1"}
+    answeroptions: [
+      {image: <img src= {apoioj_1}/>,id_image:"apoioj_1"},
+      {image: <img src= {o2_1}/>, id_image:"o2_1"}
      
     ],
   },
   {
-    answerOptions: [
-      {image: <img src= {MN1_1}/>,id_image:"MN1_1"},
-      {image: <img src= {apoioB_1}/>, id_image:"apoioB_1"}
+    answeroptions: [
+      {image: <img src= {mn1_1}/>,id_image:"mn1_1"},
+      {image: <img src= {apoiob_1}/>, id_image:"apoiob_1"}
      
     ],
   },
   {
-    answerOptions: [
-      {image: <img src= {Q1_1}/>,id_image:"Q1_1"},
-      {image: <img src= {R1_1Tela24}/>, id_image:"R1_1Tela24"}
+    answeroptions: [
+      {image: <img src= {q1_1}/>,id_image:"q1_1"},
+      {image: <img src= {r1_1tela24}/>, id_image:"r1_1tela24"}
      
     ],
   },
   {
-    answerOptions: [
-      {image: <img src= {IJ1_1}/>,id_image:"IJ1_1"},
-      {image: <img src= {apoioM_1}/>, id_image:"apoioM_1"}
+    answeroptions: [
+      {image: <img src= {ij1_1}/>,id_image:"ij1_1"},
+      {image: <img src= {apoiom_1}/>, id_image:"apoiom_1"}
      
     ],
   },
   {
-    answerOptions: [
-      {image: <img src= {A2_2}/>,id_image:"A2_2"},
-      {image: <img src= {apoioF_2Tela26}/>, id_image:"apoioF_2Tela26"}
+    answeroptions: [
+      {image: <img src= {a2_2}/>,id_image:"a2_2"},
+      {image: <img src= {apoiof_2tela26}/>, id_image:"apoiof_2tela26"}
      
     ],
   },
   {
-    answerOptions: [
-      {image: <img src= {S1_2}/>,id_image:"S1_2"},
-      {image: <img src= {D1_1Tela27}/>, id_image:"D1_1Tela27"}
+    answeroptions: [
+      {image: <img src= {s1_2}/>,id_image:"s1_2"},
+      {image: <img src= {d1_1tela27}/>, id_image:"d1_1tela27"}
      
     ],
   },
   {
-    answerOptions: [
-      {image: <img src= {N1_2}/>,id_image:"N1_2"},
-      {image: <img src= {R1_2}/>, id_image:"R1_2"}
+    answeroptions: [
+      {image: <img src= {n1_2}/>,id_image:"n1_2"},
+      {image: <img src= {r1_2}/>, id_image:"r1_2"}
      
     ],
   },
   {
-    answerOptions: [
-      {image: <img src= {C1_2}/>,id_image:"C1_2"},
-      {image: <img src= {ApoioG_2}/>, id_image:"ApoioG_2"}
+    answeroptions: [
+      {image: <img src= {c1_2}/>,id_image:"c1_2"},
+      {image: <img src= {apoiog_2}/>, id_image:"apoiog_2"}
      
     ],
   },
   {
-    answerOptions: [
-      {image: <img src= {B2_1}/>,id_image:"B2_1"},
-      {image: <img src= {apoioN_1}/>, id_image:"apoioN_1"}
+    answeroptions: [
+      {image: <img src= {b2_1}/>,id_image:"b2_1"},
+      {image: <img src= {apoion_1}/>, id_image:"apoion_1"}
      
     ],
   },
   {
-    answerOptions: [
-      {image: <img src= {F1_2}/>,id_image:"F1_2"},
-      {image: <img src= {apoioL_2}/>, id_image:"apoioL_2"}
+    answeroptions: [
+      {image: <img src= {f1_2}/>,id_image:"f1_2"},
+      {image: <img src= {apoiol_2tela31}/>, id_image:"apoiol_2tela31"}
      
     ],
   },
   {
-    answerOptions: [
-      {image: <img src= {H1_2}/>,id_image:"H1_2"},
-      {image: <img src= {apoioC_2Tela32}/>, id_image:"apoioC_2Tela32"}
+    answeroptions: [
+      {image: <img src= {h1_2}/>,id_image:"h1_2"},
+      {image: <img src= {apoioc_2tela32}/>, id_image:"apoioc_2tela32"}
      
     ],
   },
   {
-    answerOptions: [
-      {image: <img src= {L1_2}/>,id_image:"L1_2"},
-      {image: <img src= {K1_2Tela33}/>, id_image:"K1_2Tela33"}
+    answeroptions: [
+      {image: <img src= {l1_2}/>,id_image:"l1_2"},
+      {image: <img src= {k1_2tela33}/>, id_image:"k1_2tela33"}
      
     ],
   },
   {
-    answerOptions: [
-      {image: <img src= {GH2_1}/>,id_image:"GH2_1"},
-      {image: <img src= {apoioA_1}/>, id_image:"apoioA_1"}
+    answeroptions: [
+      {image: <img src= {gh2_1}/>,id_image:"gh2_1"},
+      {image: <img src= {apoioa_1tela34}/>, id_image:"apoioa_1tela34"}
      
     ],
   },
   {
-    answerOptions: [
-      {image: <img src= {A2_1}/>,id_image:"A2_1"},
-      {image: <img src= {apoioC_1Tela35}/>, id_image:"apoioC_1Tela35"}
+    answeroptions: [
+      {image: <img src= {a2_1}/>,id_image:"a2_1"},
+      {image: <img src= {apoioc_1tela35}/>, id_image:"apoioc_1tela35"}
      
     ],
   },
   {
-    answerOptions: [
-      {image: <img src= {D2_2}/>,id_image:"D2_2"},
-      {image: <img src= {apoioB_2}/>, id_image:"apoioB_2"}
+    answeroptions: [
+      {image: <img src= {d2_2}/>,id_image:"d2_2"},
+      {image: <img src= {apoiob_2}/>, id_image:"apoiob_2"}
      
     ],
   },
   {
-    answerOptions: [
-      {image: <img src= {O2_2}/>,id_image:"O2_2"},
-      {image: <img src= {apoioS_2Tela37}/>, id_image:"apoioS_2Tela37"}
+    answeroptions: [
+      {image: <img src= {o2_2}/>,id_image:"o2_2"},
+      {image: <img src= {apoios_2tela37}/>, id_image:"apoios_2tela37"}
      
     ],
   },
   {
-    answerOptions: [
-      {image: <img src= {C1_1}/>,id_image:"C1_1"},
-      {image: <img src= {D2_1Tela38}/>, id_image:"D2_1Tela38"}
+    answeroptions: [
+      {image: <img src= {c1_1}/>,id_image:"c1_1"},
+      {image: <img src= {d2_1tela38}/>, id_image:"d2_1tela38"}
      
     ],
   },
   {
-    answerOptions: [
-      {image: <img src= {B1_1}/>,id_image:"B1_1"},
-      {image: <img src= {apoioN_1Tela39}/>, id_image:"apoioN_1Tela39"}
+    answeroptions: [
+      {image: <img src= {b1_1}/>,id_image:"b1_1"},
+      {image: <img src= {apoion_1tela39}/>, id_image:"apoion_1tela39"}
      
     ],
   },
   {
-    answerOptions: [
-      {image: <img src= {E1_2Tela40}/>,id_image:"E1_2Tela40"},
-      {image: <img src= {apoioI_2}/>, id_image:"apoioI_2"}
+    answeroptions: [
+      {image: <img src= {e1_2tela40}/>,id_image:"e1_2tela40"},
+      {image: <img src= {apoioi_2}/>, id_image:"apoioi_2"}
      
     ],
   },
   {
-    answerOptions: [
-      {image: <img src= {F2_2}/>,id_image:"F2_2"},
-      {image: <img src= {apoioL_2Tela41}/>, id_image:"apoioL_2Tela41"}
+    answeroptions: [
+      {image: <img src= {f2_2}/>,id_image:"f2_2"},
+      {image: <img src= {apoiol_2tela41}/>, id_image:"apoiol_2tela41"}
      
     ],
   },
   {
-    answerOptions: [
-      {image: <img src= {M1_2}/>,id_image:"M1_2"},
-      {image: <img src= {apoioK_2}/>, id_image:"apoioK_2"}
+    answeroptions: [
+      {image: <img src= {m1_2}/>,id_image:"m1_2"},
+      {image: <img src= {apoiok_2}/>, id_image:"apoiok_2"}
      
     ],
   },
   {
-    answerOptions: [
-      {image: <img src= {E1_1}/>,id_image:"E1_1"},
-      {image: <img src= {apoioG_1Tela43}/>, id_image:"apoioG_1Tela43"}
+    answeroptions: [
+      {image: <img src= {e1_1}/>,id_image:"e1_1"},
+      {image: <img src= {apoiog_1tela43}/>, id_image:"apoiog_1tela43"}
      
     ],
   },
   {
-    answerOptions: [
-      {image: <img src= {O1_1}/>,id_image:"O1_1"},
-      {image: <img src= {apoioJ_1Tela44}/>, id_image:"apoioJ_1Tela44"}
+    answeroptions: [
+      {image: <img src= {o1_1}/>,id_image:"o1_1"},
+      {image: <img src= {apoioj_1tela44}/>, id_image:"apoioj_1tela44"}
      
     ],
   },
   {
-    answerOptions: [
-      {image: <img src= {W1_1}/>,id_image:"W1_1"},
-      {image: <img src= {apoioL_1Tela45}/>, id_image:"apoioL_1Tela45"}
+    answeroptions: [
+      {image: <img src= {w1_1}/>,id_image:"w1_1"},
+      {image: <img src= {apoiol_1tela45}/>, id_image:"apoiol_1tela45"}
      
     ],
   },
   {
-    answerOptions: [
-      {image: <img src= {G2_1}/>,id_image:"G2_1"},
-      {image: <img src= {apoioH_1}/>, id_image:"apoioH_1"}
+    answeroptions: [
+      {image: <img src= {g2_1}/>,id_image:"g2_1"},
+      {image: <img src= {apoioh_1}/>, id_image:"apoioh_1"}
      
     ],
   },
   {
-    answerOptions: [
-      {image: <img src= {MN2_1}/>,id_image:"MN2_1"},
-      {image: <img src= {apoioB_1Tela47}/>, id_image:"apoioB_1Tela47"}
+    answeroptions: [
+      {image: <img src= {mn2_1}/>,id_image:"mn2_1"},
+      {image: <img src= {apoiob_1tela47}/>, id_image:"apoiob_1tela47"}
      
     ],
   },
   {
-    answerOptions: [
-      {image: <img src= {IJ2_1}/>,id_image:"IJ2_1"},
-      {image: <img src= {apoioM_1Tela48}/>, id_image:"apoioM_1Tela48"}
+    answeroptions: [
+      {image: <img src= {ij2_1}/>,id_image:"ij2_1"},
+      {image: <img src= {apoiom_1tela48}/>, id_image:"apoiom_1tela48"}
      
     ],
   },
   {
-    answerOptions: [
-      {image: <img src= {D1_2}/>,id_image:"D1_2"},
-      {image: <img src= {apoioB_2Tela49}/>, id_image:"apoioB_2Tela49"}
+    answeroptions: [
+      {image: <img src= {d1_2}/>,id_image:"d1_2"},
+      {image: <img src= {apoiob_2tela49}/>, id_image:"apoiob_2tela49"}
      
     ],
   },
   {
-    answerOptions: [
-      {image: <img src= {G2_2}/>,id_image:"G2_2"},
-      {image: <img src= {apoioN_2Tela50}/>, id_image:"apoioN_2Tela50"}
+    answeroptions: [
+      {image: <img src= {g2_2}/>,id_image:"g2_2"},
+      {image: <img src= {apoion_2tela50}/>, id_image:"apoion_2tela50"}
      
     ],
   },
   {
-    answerOptions: [
-      {image: <img src= {J1_2}/>,id_image:"J1_2"},
-      {image: <img src= {K2_2}/>, id_image:"K2_2"}
+    answeroptions: [
+      {image: <img src= {j1_2}/>,id_image:"j1_2"},
+      {image: <img src= {k2_2}/>, id_image:"k2_2"}
      
     ],
   },
   {
-    answerOptions: [
-      {image: <img src= {M2_2}/>,id_image:"M2_2"},
-      {image: <img src= {apoioK_2Tela52}/>, id_image:"apoioK_2Tela52"}
+    answeroptions: [
+      {image: <img src= {m2_2}/>,id_image:"m2_2"},
+      {image: <img src= {apoiok_2tela52}/>, id_image:"apoiok_2tela52"}
      
     ],
   },
   {
-    answerOptions: [
-      {image: <img src= {T1_2}/>,id_image:"T1_2"},
-      {image: <img src= {apoioH_2Tela53}/>, id_image:"apoioH_2Tela53"}
+    answeroptions: [
+      {image: <img src= {t1_2}/>,id_image:"t1_2"},
+      {image: <img src= {apoioh_2tela53}/>, id_image:"apoioh_2tela53"}
      
     ],
   },
   {
-    answerOptions: [
-      {image: <img src= {U1_2}/>,id_image:"U1_2"},
-      {image: <img src= {apoioQ_1}/>, id_image:"apoioQ_1"}
+    answeroptions: [
+      {image: <img src= {u1_2}/>,id_image:"u1_2"},
+      {image: <img src= {apoioq_1}/>, id_image:"apoioq_1"}
      
     ],
   },
   {
-    answerOptions: [
-      {image: <img src= {F1_1}/>,id_image:"F1_1"},
-      {image: <img src= {M1_1Tela55}/>, id_image:"M1_1Tela55"}
+    answeroptions: [
+      {image: <img src= {f1_1}/>,id_image:"f1_1"},
+      {image: <img src= {m1_1tela55}/>, id_image:"m1_1tela55"}
      
     ],
   },
   {
-    answerOptions: [
-      {image: <img src= {Z1_1}/>,id_image:"Z1_1"},
-      {image: <img src= {apoioI_1}/>, id_image:"apoioI_1"}
+    answeroptions: [
+      {image: <img src= {z1_1}/>,id_image:"z1_1"},
+      {image: <img src= {apoioi_1}/>, id_image:"apoioi_1"}
      
     ],
   },
   {
-    answerOptions: [
-      {image: <img src= {J2_2}/>,id_image:"J2_2"},
-      {image: <img src= {K2_2Tela57}/>, id_image:"K2_2Tela57"}
+    answeroptions: [
+      {image: <img src= {j2_2}/>,id_image:"j2_2"},
+      {image: <img src= {k2_2tela57}/>, id_image:"k2_2tela57"}
      
     ],
   },
   {
-    answerOptions: [
-      {image: <img src= {U2_2}/>,id_image:"U2_2"},
-      {image: <img src= {apoioQ_1Tela58}/>, id_image:"apoioQ_1Tela58"}
+    answeroptions: [
+      {image: <img src= {u2_2}/>,id_image:"u2_2"},
+      {image: <img src= {apoioq_1tela58}/>, id_image:"apoioq_1tela58"}
      
     ],
   },
   {
-    answerOptions: [
-      {image: <img src= {CD2_1}/>,id_image:"CD2_1"},
-      {image: <img src= {apoioK_1Tela59}/>, id_image:"apoioK_1Tela59"}
+    answeroptions: [
+      {image: <img src= {cd2_1}/>,id_image:"cd2_1"},
+      {image: <img src= {apoiok_1tela59}/>, id_image:"apoiok_1tela59"}
      
     ],
   },
   {
-    answerOptions: [
-      {image: <img src= {Z2_1}/>,id_image:"Z2_1"},
-      {image: <img src= {apoioI_1Tela60}/>, id_image:"apoioI_1Tela60"}
+    answeroptions: [
+      {image: <img src= {z2_1}/>,id_image:"z2_1"},
+      {image: <img src= {apoioi_1tela60}/>, id_image:"apoioi_1tela60"}
      
     ],
   },
@@ -618,129 +619,128 @@ const questions = [
 
 export const Home = () =>{  
   const {user} = useContext(AuthGoogleContext)
-
-  function gravar(userId,A1_2,apoioF_2,apoioA_1,GH1_1,apoiol_2,E1_2,K1_2,L2_2,apoioU_2,Q2_2,apoioH_2,T2_2,R1_apoio_1,M1_1,apoioL_1,W2_1,apoioK_1,CD1_1,Q2_2Tela10,G1_1,Q2_1,R1_1,D1_1,S2_2,N2_2,apoioG_2Tela14,C2_2,A1_1,apoioC_1,apoioN_2,G1_2,apoioC_2,H2_2,apoioS_2,O1_2,apoioU_2Tela19,Q1_2,C2_1,D2_1,apoioG_1,E2_1,apoioJ_1,O2_1,MN1_1,apoioB_1,Q1_1,R1_1,IJ1_1,apoioM_1,A2_2,apoioF_2Tela26,S1_2,D1_1Tela27,N1_2,R1_2,C1_2,apoioG_2,B2_1,apoioN_1,F1_2,apoioL_2,H1_2,apoioC_2Tela32,L1_2,K1_2Tela33,GH2_1,apoioA_1,A2_1,apoioC_1Tela35,D2_2,apoioB_2,O2_2,apoioS_2Tela37,C1_1,D2_1Tela38,B1_1,apoioN_1Tela39,E1_2Tela40,apoioI_2,F2_2,apoioL_2Tela41,M1_2,apoioK_2,E1_1,apoioG_1Tela43,O1_1,apoioJ_1Tela44,W1_1,apoioL_1Tela45,G2_1,apoioH_1,MN2_1,apoioB_1Tela47,IJ2_1,apoioM_1Tela48,D1_2,apoioB_2Tela49,G2_2,apoioN_2Tela50,J1_2,K2_2,M2_2,apoioK_2Tela52,T1_2,apoioH_2Tela53,U1_2,apoioQ_1,F1_1,M1_1Tela55,Z1_1,apoioI_1,J2_2,K2_2Tela57,U2_2,apoioQ_1Tela58,CD2_1,apoioK_1Tela59,Z2_1,apoioI_1Tela60) {
+  function gravar(userId,a1_2,apoiof_2,apoioa_1,gh1_1,apoiol_2,e1_2,k1_2,l2_2,apoiou_2,q2_2,apoioh_2,t2_2,r1_apoio_1,m1_1,apoiol_1,w2_1,apoiok_1,cd1_1,apoioh_1tela10,g1_1,q2_1,r1_1,d1_1,s2_2,n2_2,apoiog_2tela14,c2_2,a1_1,apoioc_1,apoion_2,g1_2,apoioc_2,h2_2,apoios_2,o1_2,apoiou_2tela19,q1_2,c2_1,d2_1,apoiog_1,e2_1,apoioj_1,o2_1,mn1_1,apoiob_1,q1_1,r1_1tela24,ij1_1,apoiom_1,a2_2,apoiof_2tela26,s1_2,d1_1tela27,n1_2,r1_2,c1_2,apoiog_2,b2_1,apoion_1,f1_2,apoiol_2tela31,h1_2,apoioc_2tela32,l1_2,k1_2tela33,gh2_1,apoioa_1tela34,a2_1,apoioc_1tela35,d2_2,apoiob_2,o2_2,apoios_2tela37,c1_1,d2_1tela38,b1_1,apoion_1tela39,e1_2tela40,apoioi_2,f2_2,apoiol_2tela41,m1_2,apoiok_2,e1_1,apoiog_1tela43,o1_1,apoioj_1tela44,w1_1,apoiol_1tela45,g2_1,apoioh_1,mn2_1,apoiob_1tela47,ij2_1,apoiom_1tela48,d1_2,apoiob_2tela49,g2_2,apoion_2tela50,j1_2,k2_2,m2_2,apoiok_2tela52,t1_2,apoioh_2tela53,u1_2,apoioq_1,f1_1,m1_1tela55,z1_1,apoioi_1,j2_2,k2_2tela57,u2_2,apoioq_1tela58,cd2_1,apoiok_1tela59,z2_1,apoioi_1tela60) {
     const db = getDatabase(app);
     set(ref(db, 'votos/' + userId), {
-      A1_2:A1_2,
-      apoioF_2:apoioF_2,
-      apoioA_1:apoioA_1,
-      GH1_1:GH1_1,
-      apoiol_2:apoiol_2,
-      E1_2:E1_2,
-      K1_2:K1_2,
-      L2_2:L2_2,
-      apoioU_2:apoioU_2,                                                            
-      Q2_2:Q2_2,                                                            
-      apoioH_2:apoioH_2,                                                            
-      T2_2:T2_2,                                                            
-      R1_apoio_1:R1_apoio_1,                                                            
-      M1_1:M1_1,                                                            
-      apoioL_1:apoioL_1,                                                            
-      W2_1:W2_1,                                                            
-      apoioK_1:apoioK_1,                                                            
-      CD1_1:CD1_1,                                                            
-      Q2_2Tela10:Q2_2Tela10,                                                            
-      G1_1:G1_1,                                                            
-      Q2_1:Q2_1,                                                            
-      R1_1:R1_1,                                                                                
-      D1_1:D1_1,                                                            
-      S2_2:S2_2,                                                            
-      N2_2:N2_2,                                                      
-      apoioG_2Tela14:apoioG_2Tela14,
-      C2_2:C2_2,                                                            
-      A1_1:A1_1,                                                        
-      apoioC_1:apoioC_1,                                                            
-      apoioN_2:apoioN_2,                                                        
-      G1_2:G1_2,                                                            
-      apoioC_2:apoioC_2,                                                            
-      H2_2:H2_2,                                                            
-      apoioS_2:apoioS_2,                                                        
-      O1_2:O1_2,                                                            
-      apoioU_2Tela19:apoioU_2Tela19,                                                            
-      Q1_2:Q1_2,                                                            
-      C2_1:C2_1,                                                            
-      D2_1:D2_1,                                                          
-      apoioG_1:apoioG_1,                                                        
-      E2_1:E2_1,                                                            
-      apoioJ_1:apoioJ_1,                                                            
-      O2_1:O2_1,
-      MN1_1:MN1_1,
-      apoioB_1:apoioB_1,
-      Q1_1:Q1_1,
-      R1_1Tela24:R1_1Tela24,
-      IJ1_1:IJ1_1,
-      apoioM_1:apoioM_1,
-      A2_2:A2_2,
-      apoioF_2Tela26:apoioF_2Tela26,
-      S1_2:S1_2,
-      D1_1Tela27:D1_1Tela27,
-      N1_2:N1_2,
-      R1_2:R1_2,
-      C1_2:C1_2,
-      ApoioG_2:ApoioG_2,
-      B2_1:B2_1,
-      apoioN_1:apoioN_1,
-      F1_2:F1_2,
-      apoioL_2:apoioL_2,
-      H1_2:H1_2,
-      apoioC_2Tela32:apoioC_2Tela32,
-      L1_2:L1_2,
-      K1_2Tela33:K1_2Tela33,
-      GH2_1:GH2_1,
-      apoioA_1:apoioA_1,
-      A2_1:A2_1,
-      apoioC_1Tela35:apoioC_1Tela35,
-      D2_2:D2_2,
-      apoioB_2:apoioB_2,
-      O2_2:O2_2,
-      apoioS_2Tela37:apoioS_2Tela37,
-      C1_1:C1_1,
-      D2_1Tela38:D2_1Tela38,
-      B1_1:B1_1,
-      apoioN_1Tela39:apoioN_1Tela39,
-      E1_2Tela40:E1_2Tela40,
-      apoioI_2:apoioI_2,
-      F2_2:F2_2,
-      apoioL_2Tela41:apoioL_2Tela41,
-      M1_2:M1_2,
-      apoioK_2:apoioK_2,
-      E1_1:E1_1,
-      apoioG_1Tela43:apoioG_1Tela43,
-      O1_1:O1_1,
-      apoioJ_1Tela44:apoioJ_1Tela44,
-      apoioJ_1Tela44:apoioJ_1Tela44,
-      apoioL_1Tela45:apoioL_1Tela45,
-      G2_1:G2_1,
-      apoioH_1:apoioH_1,
-      MN2_1:MN2_1,
-      apoioB_1Tela47:apoioB_1Tela47,
-      IJ2_1:IJ2_1,
-      apoioM_1Tela48:apoioM_1Tela48,
-      D1_2:D1_2,
-      apoioB_2Tela49:apoioB_2Tela49,
-      G2_2:G2_2,
-      apoioN_2Tela50:apoioN_2Tela50,
-      J1_2:J1_2,
-      K2_2:K2_2,
-      M2_2:M2_2,
-      apoioK_2Tela52:apoioK_2Tela52,
-      T1_2:T1_2,
-      apoioH_2Tela53:apoioH_2Tela53,
-      U1_2:U1_2,
-      apoioQ_1:apoioQ_1,
-      F1_1:F1_1,
-      M1_1Tela55:M1_1Tela55,
-      Z1_1:Z1_1,
-      apoioI_1:apoioI_1,
-      J2_2:J2_2,
-      K2_2Tela57:K2_2Tela57,
-      U2_2:U2_2,
-      apoioQ_1Tela58:apoioQ_1Tela58,
-      CD2_1:CD2_1,
-      apoioK_1Tela59:apoioK_1Tela59,
-      Z2_1:Z2_1,
-      apoioI_1Tela60:apoioI_1Tela60,
+      A1_2:a1_2,
+      apoioF_2:apoiof_2,
+      apoioA_1:apoioa_1,
+      GH1_1:gh1_1,
+      apoioL_2:apoiol_2,
+      E1_2:e1_2,
+      K1_2:k1_2,
+      L2_2:l2_2,
+      apoioU_2:apoiou_2,                                                            
+      Q2_2:q2_2,                                                            
+      apoioH_2:apoioh_2,                                                            
+      T2_2:t2_2,                                                            
+      F2_1:r1_apoio_1,                                                            
+      M1_1:m1_1,                                                            
+      apoioL_1:apoiol_1,                                                            
+      W2_1:w2_1,                                                            
+      apoioK_1:apoiok_1,                                                            
+      CD1_1:cd1_1,                                                            
+      apoioH_1Tela10:apoioh_1tela10,                                                            
+      G1_1:g1_1,                                                            
+      Q2_1:q2_1,                                                            
+      R1_1:r1_1,                                                                                
+      D1_1:d1_1,                                                            
+      S2_2:s2_2,                                                            
+      N2_2:n2_2,                                                      
+      apoioG_2Tela14:apoiog_2tela14,
+      C2_2:c2_2,                                                            
+      A1_1:a1_1,                                                        
+      apoioC_1:apoioc_1,                                                            
+      apoioN_2:apoion_2,                                                        
+      G1_2:g1_2,                                                            
+      apoioC_2:apoioc_2,                                                            
+      H2_2:h2_2,                                                            
+      apoioS_2:apoios_2,                                                        
+      O1_2:o1_2,                                                            
+      apoioU_2Tela19:apoiou_2tela19,                                                            
+      Q1_2:q1_2,                                                            
+      C2_1:c2_1,                                                            
+      D2_1:d2_1,                                                          
+      apoioG_1:apoiog_1,                                                        
+      E2_1:e2_1,                                                            
+      apoioJ_1:apoioj_1,                                                            
+      O2_1:o2_1,
+      MN1_1:mn1_1,
+      apoioB_1:apoiob_1,
+      Q1_1:q1_1,
+      R1_1Tela24:r1_1tela24,
+      IJ1_1:ij1_1,
+      apoioM_1:apoiom_1,
+      A2_2:a2_2,
+      apoioF_2Tela26:apoiof_2tela26,
+      S1_2:s1_2,
+      D1_1Tela27:d1_1tela27,
+      N1_2:n1_2,
+      R1_2:r1_2,
+      C1_2:c1_2,
+      ApoioG_2:apoiog_2,
+      B2_1:b2_1,
+      apoioN_1:apoion_1,
+      F1_2:f1_2,
+      ApoioL_2Tela31:apoiol_2tela31,
+      H1_2:h1_2,
+      apoioC_2Tela32:apoioc_2tela32,
+      L1_2:l1_2,
+      K1_2Tela33:k1_2tela33,
+      GH2_1:gh2_1,
+      apoioA_1tela34:apoioa_1tela34,
+      A2_1:a2_1,
+      apoioC_1Tela35:apoioc_1tela35,
+      D2_2:d2_2,
+      apoioB_2:apoiob_2,
+      O2_2:o2_2,
+      apoioS_2Tela37:apoios_2tela37,
+      C1_1:c1_1,
+      D2_1Tela38:d2_1tela38,
+      B1_1:b1_1,
+      apoioN_1Tela39:apoion_1tela39,
+      E1_2Tela40:e1_2tela40,
+      apoioI_2:apoioi_2,
+      F2_2:f2_2,
+      apoioL_2Tela41:apoiol_2tela41,
+      M1_2:m1_2,
+      apoioK_2:apoiok_2,
+      E1_1:e1_1,
+      apoioG_1Tela43:apoiog_1tela43,
+      O1_1:o1_1,
+      apoioJ_1Tela44:apoioj_1tela44,
+      W1_1:w1_1,
+      apoioL_1Tela45:apoiol_1tela45,
+      G2_1:g2_1,
+      apoioH_1:apoioh_1,
+      MN2_1:mn2_1,
+      apoioB_1Tela47:apoiob_1tela47,
+      IJ2_1:ij2_1,
+      apoioM_1Tela48:apoiom_1tela48,
+      D1_2:d1_2,
+      apoioB_2Tela49:apoiob_2tela49,
+      G2_2:g2_2,
+      apoioN_2Tela50:apoion_2tela50,
+      J1_2:j1_2,
+      K2_2:k2_2,
+      M2_2:m2_2,
+      apoioK_2Tela52:apoiok_2tela52,
+      T1_2:t1_2,
+      apoioH_2Tela53:apoioh_2tela53,
+      U1_2:u1_2,
+      apoioQ_1:apoioq_1,
+      F1_1:f1_1,
+      M1_1Tela55:m1_1tela55,
+      Z1_1:z1_1,
+      apoioI_1:apoioi_1,
+      J2_2:j2_2,
+      K2_2Tela57:k2_2tela57,
+      U2_2:u2_2,
+      apoioQ_1Tela58:apoioq_1tela58,
+      CD2_1:cd2_1,
+      apoioK_1Tela59:apoiok_1tela59,
+      Z2_1:z2_1,
+      apoioI_1Tela60:apoioi_1tela60
 
     }).then(() => {
        
@@ -752,404 +752,488 @@ export const Home = () =>{
  
   const [end, setend] = useState(false);
   const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [A1_2,setA1_2] = useState(0);
-  const [apoioF_2,setapoioF_2] = useState(0);
-  const [apoioA_1,setapoioA_1] = useState(0);
-  const [GH1_1,setGH1_1] = useState(0);
+  const [a1_2,seta1_2] = useState(0);
+  const [apoiof_2,setapoiof_2] = useState(0);
+  const [apoioa_1,setapoioa_1] = useState(0);
+  const [gh1_1,setgh1_1] = useState(0);
   const [apoiol_2,setapoiol_2] = useState(0);
-  const [E1_2,setE1_2] = useState(0);
-  const [K1_2,setK1_2] = useState(0);
-  const [L2_2,setL2_2] = useState(0);
-  const [apoioU_2Tela19,setapoioU_2Tela19] = useState(0);
-  const [Q2_2Tela10,setQ2_2Tela10] = useState(0);
-  const [apoioH_2,setapoioH_2] = useState(0);
-  const [T2_2,setT2_2] = useState(0);
-  const [R1_apoio_1,setR1_apoio_1] = useState(0);
-  const [M1_1,setM1_1] = useState(0);
-  const [apoioL_1,setapoioL_1] = useState(0);
-  const [W2_1,setW2_1] = useState(0);
-  const [apoioK_1,setapoioK_1] = useState(0);
-  const [CD1_1,setCD1_1] = useState(0);
-  const [Q2_2,setQ2_2] = useState(0);
-  const [G1_1,setG1_1] = useState(0);
-  const [Q2_1,setQ2_1] = useState(0);
-  const [R1_1,setR1_1] = useState(0);
-  const [D1_1,setD1_1] = useState(0);
-  const [S2_2,setS2_2] = useState(0);
-  const [N2_2,setN2_2] = useState(0);
-  const [apoioG_2Tela14,setapoioG_2Tela14] = useState(0);
-  const [C2_2,setC2_2] = useState(0);
-  const [A1_1,setA1_1] = useState(0);
-  const [apoioC_1,setapoioC_1] = useState(0);
-  const [apoioN_2,setapoioN_2] = useState(0);
-  const [G1_2,setG1_2] = useState(0);
-  const [apoioC_2,setapoioC_2] = useState(0);
-  const [H2_2,setH2_2] = useState(0);
-  const [apoioS_2,setapoioS_2] = useState(0);
-  const [O1_2,setO1_2] = useState(0);
-  const [apoioU_2,setapoioU_2] = useState(0);
-  const [Q1_2,setQ1_2] = useState(0);
-  const [C2_1,setC2_1] = useState(0);
-  const [D2_1,setD2_1] = useState(0);
-  const [apoioG_1,setapoioG_1] = useState(0);
-  const [E2_1,setE2_1] = useState(0);
-  const [apoioJ_1,setapoioJ_1] = useState(0);
-  const [O2_1,setO2_1] = useState(0);
-
-
+  const [e1_2,sete1_2] = useState(0);
+  const [k1_2,setk1_2] = useState(0);
+  const [l2_2,setl2_2] = useState(0);
+  const [apoiou_2tela19,setapoiou_2tela19] = useState(0);
+  const [apoioh_1tela10,setapoioh_1tela10] = useState(0);
+  const [apoioh_2,setapoioh_2] = useState(0);
+  const [t2_2,sett2_2] = useState(0);
+  const [r1_apoio_1,setr1_apoio_1] = useState(0);
+  const [m1_1,setm1_1] = useState(0);
+  const [apoiol_1,setapoiol_1] = useState(0);
+  const [w2_1,setw2_1] = useState(0);
+  const [apoiok_1,setapoiok_1] = useState(0);
+  const [cd1_1,setcd1_1] = useState(0);
+  const [q2_2,setq2_2] = useState(0);
+  const [g1_1,setg1_1] = useState(0);
+  const [q2_1,setq2_1] = useState(0);
+  const [r1_1,setr1_1] = useState(0);
+  const [d1_1,setd1_1] = useState(0);
+  const [s2_2,sets2_2] = useState(0);
+  const [n2_2,setn2_2] = useState(0);
+  const [apoiog_2tela14,setapoiog_2tela14] = useState(0);
+  const [c2_2,setc2_2] = useState(0);
+  const [a1_1,seta1_1] = useState(0);
+  const [apoioc_1,setapoioc_1] = useState(0);
+  const [apoion_2,setapoion_2] = useState(0);
+  const [g1_2,setg1_2] = useState(0);
+  const [apoioc_2,setapoioc_2] = useState(0);
+  const [h2_2,seth2_2] = useState(0);
+  const [apoios_2,setapoios_2] = useState(0);
+  const [o1_2,seto1_2] = useState(0);
+  const [apoiou_2,setapoiou_2] = useState(0);
+  const [q1_2,setq1_2] = useState(0);
+  const [c2_1,setc2_1] = useState(0);
+  const [d2_1,setd2_1] = useState(0);
+  const [apoiog_1,setapoiog_1] = useState(0);
+  const [e2_1,sete2_1] = useState(0);
+  const [apoioj_1,setapoioj_1] = useState(0);
+  const [mn1_1,setmn1_1] = useState(0);
+  const [apoiob_1,setapoiob_1] = useState(0);
+  const [q1_1,setq1_1] = useState(0);
+  const [r1_1tela24,setr1_1tela24] = useState(0);
+  const [ij1_1,setij1_1] = useState(0);
+  const [apoiom_1,setapoiom_1] = useState(0);
+  const [a2_2,seta2_2] = useState(0);
+  const [apoiof_2tela26,setapoiof_2tela26] = useState(0);
+  const [s1_2,sets1_2] = useState(0);
+  const [d1_1tela27,setd1_1tela27] = useState(0);
+  const [n1_2,setn1_2] = useState(0);
+  const [r1_2,setr1_2] = useState(0);
+  const [c1_2,setc1_2] = useState(0);
+  const [apoiog_2,setapoiog_2] = useState(0);
+  const [b2_1,setb2_1] = useState(0);
+  const [apoion_1,setapoion_1] = useState(0);
+  const [f1_2,setf1_2] = useState(0);
+  const [apoiol_2tela31,setapoiol_2tela31] = useState(0);
+  const [h1_2,seth1_2] = useState(0);
+  const [apoioc_2tela32,setapoioc_2tela32] = useState(0);
+  const [l1_2,setl1_2] = useState(0);
+  const [k1_2tela33,setk1_2tela33] = useState(0);
+  const [gh2_1,setgh2_1] = useState(0);
+  const [apoioa_1tela34,setapoioa_1tela34] = useState(0);
+  const [a2_1,seta2_1] = useState(0);
+  const [apoioc_1tela35,setapoioc_1tela35] = useState(0);
+  const [d2_2,setd2_2] = useState(0);
+  const [apoiob_2,setapoiob_2] = useState(0);
+  const [apoios_2tela37,setapoios_2tela37] = useState(0);
+  const [c1_1,setc1_1] = useState(0);
+  const [d2_1tela38,setd2_1tela38] = useState(0);
+  const [b1_1,setb1_1] = useState(0);
+  const [apoion_1tela39,setapoion_1tela39] = useState(0);
+  const [e1_2tela40,sete1_2tela40] = useState(0);
+  const [apoioi_2,setapoioi_2] = useState(0);
+  const [f2_2,setf2_2] = useState(0);
+  const [apoiol_2tela41,setapoiol_2tela41] = useState(0);
+  const [m1_2,setm1_2] = useState(0);
+  const [apoiok_2,setapoiok_2] = useState(0);
+  const [e1_1,sete1_1] = useState(0);
+  const [apoiog_1tela43,setapoiog_1tela43] = useState(0);
+  const [o1_1,seto1_1] = useState(0);
+  const [apoioj_1tela44,setapoioj_1tela44] = useState(0);
+  const [w1_1,setw1_1] = useState(0);
+  const [apoiol_1tela45,setapoiol_1tela45] = useState(0);
+  const [g2_1,setg2_1] = useState(0);
+  const [apoioh_1,setapoioh_1] = useState(0);
+  const [mn2_1,setmn2_1] = useState(0);
+  const [apoiob_1tela47,setapoiob_1tela47] = useState(0);
+  const [ij2_1,setij2_1] = useState(0);
+  const [apoiom_1tela48,setapoiom_1tela48] = useState(0);
+  const [d1_2,setd1_2] = useState(0);
+  const [apoiob_2tela49,setapoiob_2tela49] = useState(0);
+  const [apoion_2tela50,setapoion_2tela50] = useState(0);
+  const [j1_2,setj1_2] = useState(0);
+  const [k2_2,setk2_2] = useState(0);
+  const [m2_2,setm2_2] = useState(0);
+  const [apoiok_2tela52,setapoiok_2tela52] = useState(0);
+  const [t1_2,sett1_2] = useState(0);
+  const [apoioh_2tela53,setapoioh_2tela53] = useState(0);
+  const [u1_2,setu1_2] = useState(0);
+  const [apoioq_1,setapoioq_1] = useState(0);
+  const [f1_1,setf1_1] = useState(0);
+  const [m1_1tela55,setm1_1tela55] = useState(0);
+  const [z1_1,setz1_1] = useState(0);
+  const [apoioi_1,setapoioi_1] = useState(0);
+  const [j2_2,setj2_2] = useState(0);
+  const [k2_2tela57,setk2_2tela57] = useState(0);
+  const [u2_2,setu2_2] = useState(0);
+  const [apoioq_1tela58,setapoioq_1tela58] = useState(0);
+  const [cd2_1,setcd2_1] = useState(0);
+  const [apoiok_1tela59,setapoiok_1tela59] = useState(0);
+  const [z2_1,setz2_1] = useState(0);
+  const [apoioi_1tela60,setapoioi_1tela60] = useState(0);
+  const [o2_1,seto2_1] = useState(0);
+  const [o2_2,seto2_2] = useState(0);
+  const [g2_2,setg2_2] = useState(0);
   const [userlog, setuserlog] = useState(null);
 
-  const handleAnswer=(answerOption) => {
+  const handleAnswer=(answeroption) => {
     setuserlog(user)
-    switch (answerOption) {
-      case "A1_2":
-        setA1_2(A1_2+1)
+    switch (answeroption) {
+      case "a1_2":
+        seta1_2(a1_2+1)
         break;
-      case "apoioF_2":
-        setapoioF_2(apoioF_2+1)
+      case "apoiof_2":
+        setapoiof_2(apoiof_2+1)
         break;
-      case "apoioA_1":
-        setapoioA_1(apoioA_1+1)
+      case "apoioa_1":
+        setapoioa_1(apoioa_1+1)
         break;
-      case "GH1_1":
-        setGH1_1(GH1_1+1)
+      case "gh1_1":
+        setgh1_1(gh1_1+1)
         break;
       case "apoiol_2":
         setapoiol_2(apoiol_2+1)
         break;
-      case "E1_2":
-        setE1_2(E1_2+1)
+      case "e1_2":
+        sete1_2(e1_2+1)
         break;
-      case "K1_2":
-        setK1_2(K1_2+1)
+      case "k1_2":
+        setk1_2(k1_2+1)
         break;
-      case "L2_2":
-        setL2_2(L2_2+1)
+      case "l2_2":
+        setl2_2(l2_2+1)
         break;
-      case "apoioU_2":
-        setapoioU_2(apoioU_2+1)
+      case "apoiou_2":
+        setapoiou_2(apoiou_2+1)
         break;                                                          
-      case "Q2_2":
-        setQ2_2(Q2_2+1)
+      case "q2_2":
+        setq2_2(q2_2+1)
         break;                                                            
-      case"apoioH_2":
-        setapoioH_2(apoioH_2+1)
+      case"apoioh_2":
+        setapoioh_2(apoioh_2+1)
         break;                                                          
-      case "T2_2":
-        setT2_2(T2_2+1)
+      case "t2_2":
+        sett2_2(t2_2+1)
         break;                                                            
-      case"R1_apoio_1":
-        setR1_apoio_1(R1_apoio_1+1)
+      case"r1_apoio_1":
+        setr1_apoio_1(r1_apoio_1+1)
         break;                                                            
-      case"M1_1":
-        setM1_1(M1_1+1)
+      case"m1_1":
+        setm1_1(m1_1+1)
         break;                                                            
-      case"apoioL_1":
-        setapoioL_1(apoioL_1+1)
+      case"apoiol_1":
+        setapoiol_1(apoiol_1+1)
         break;                                                            
-      case"W2_1":
-        setW2_1(W2_1+1)
+      case"w2_1":
+        setw2_1(w2_1+1)
         break;                                                            
-      case "apoioK_1":
-        setapoioK_1(apoioK_1+1)
+      case "apoiok_1":
+        setapoiok_1(apoiok_1+1)
         break;                                                            
-      case"CD1_1":
-        setCD1_1(CD1_1+1)
+      case"cd1_1":
+        setcd1_1(cd1_1+1)
         break;                                                            
-      case"Q2_2Tela10":
-        setQ2_2Tela10(Q2_2Tela10+1)
+      case"apoioh_1tela10":
+        setapoioh_1tela10(apoioh_1tela10+1)
         break;
-      case "G1_1":
-        setG1_1(G1_1+1)
+      case "g1_1":
+        setg1_1(g1_1+1)
         break;                                                            
-      case "Q2_1":
-        setQ2_1(Q2_1+1)
+      case "q2_1":
+        setq2_1(q2_1+1)
         break;                                                            
-      case"R1_1":
-        setR1_1(R1_1+1)
+      case"r1_1":
+        setr1_1(r1_1+1)
         break;                                                        
-      case"D1_1":
-        setD1_1(D1_1+1)
+      case"d1_1":
+        setd1_1(d1_1+1)
         break;                                                            
-      case"S2_2":
-        setS2_2(S2_2+1)
+      case"s2_2":
+        sets2_2(s2_2+1)
         break;                                                            
-      case "N2_2":
-        setN2_2(N2_2+1)
+      case "n2_2":
+        setn2_2(n2_2+1)
         break;                                                      
-      case"apoioG_2Tela14":
-        setapoioG_2Tela14(apoioG_2Tela14+1)
+      case"apoiog_2tela14":
+        setapoiog_2tela14(apoiog_2tela14+1)
         break;                                                        
-      case "C2_2":
-        setC2_2(C2_2+1)
-        break;                                                            
-      case "A1_1":
-        setA1_1(A1_1+1)
+      case "c2_2":
+        setc2_2(c2_2+1)
+        break;
+                                                                    
+      case "a1_1":
+        seta1_1(a1_1+1)
         break;                                                        
-      case "apoioC_1":
-        setapoioC_1(apoioC_1+1)
+      case "apoioc_1":
+        setapoioc_1(apoioc_1+1)
         break;                                                            
-      case "apoioN_2":
-        setapoioN_2(apoioN_2+1)
+      case "apoion_2":
+        setapoion_2(apoion_2+1)
         break;                                                        
-      case "G1_2":
-        setG1_2(G1_2+1)
+      case "g1_2":
+        setg1_2(g1_2+1)
         break;                                                            
-      case "apoioC_2":
-        setapoioC_2(apoioC_2+1)
+      case "apoioc_2":
+        setapoioc_2(apoioc_2+1)
         break;                                                            
-      case "H2_2":
-        setH2_2(H2_2+1)
+      case "h2_2":
+        seth2_2(h2_2+1)
         break;                                                            
-      case "apoioS_2":
-        setapoioS_2(apoioS_2+1)
+      case "apoios_2":
+        setapoios_2(apoios_2+1)
         break;                                                        
-      case "O1_2":
-        setO1_2(O1_2+1)
+      case "o1_2":
+        seto1_2(o1_2+1)
         break;                                                            
-      case "apoioU_2Tela19":
-        setapoioU_2Tela19(apoioU_2Tela19+1)
+      case "apoiou_2tela19":
+        setapoiou_2tela19(apoiou_2tela19+1)
         break;                                                            
-      case "Q1_2":
-        setQ1_2(Q1_2+1)
+      case "q1_2":
+        setq1_2(q1_2+1)
         break;                                                            
-      case "C2_1":
-        setC2_1(C2_1+1)
+      case "c2_1":
+        setc2_1(c2_1+1)
         break;                                                            
-      case "D2_1":
-        setD2_1(D2_1+1)
+      case "d2_1":
+        setd2_1(d2_1+1)
         break;                                                          
-      case "apoioG_1":
-        setapoioG_1(apoioG_1+1)
+      case "apoiog_1":
+        setapoiog_1(apoiog_1+1)
         break;                                                        
-      case "E2_1":
-        setE2_1(E2_1+1)
+      case "e2_1":
+        sete2_1(e2_1+1)
         break;                                                            
-      case "apoioJ_1":
-        setapoioJ_1(apoioJ_1+1)
-        break;  
-      case "MN1_1":
-        setMN1_1(MN1_1+1)
+      case "apoioj_1":
+        setapoioj_1(apoioj_1+1)
         break;
-      case "apoioB_1":
-        setapoioB_1(apoioB_1+1)
+        case "o2_1":
+        seto2_1(o2_1+1)
+        break;
+      case "mn1_1":
+        setmn1_1(mn1_1+1)
+        break;
+      case "apoiob_1":
+        setapoiob_1(apoiob_1+1)
         break; 
-      case "Q1_1":
-        setQ1_1(Q1_1+1)
+      case "q1_1":
+        setq1_1(q1_1+1)
         break;
-      case "R1_1Tela24":
-        setR1_1Tela24(R1_1Tela24+1)
+      case "r1_1tela24":
+        setr1_1tela24(r1_1tela24+1)
         break;
-      case "IJ1_1":
-        setIJ1_1(IJ1_1+1)
+      case "ij1_1":
+        setij1_1(ij1_1+1)
         break;
-      case "apoioM_1":
-        setapoioM_1(apoioM_1+1)
+      case "apoiom_1":
+        setapoiom_1(apoiom_1+1)
         break;
-      case "A2_2":
-        setA2_2(A2_2+1)
+      case "a2_2":
+        seta2_2(a2_2+1)
         break;
-      case "apoioF_2Tela26":
-        setapoioF_2Tela26(apoioF_2Tela26+1)
+      case "apoiof_2tela26":
+        setapoiof_2tela26(apoiof_2tela26+1)
         break;
-      case "S1_2":
-        setS1_2(S1_2+1)
+      case "s1_2":
+        sets1_2(s1_2+1)
         break;
-      case "D1_1Tela27":
-        setD1_1Tela27(D1_1Tela27+1)
+      case "d1_1tela27":
+        setd1_1tela27(d1_1tela27+1)
         break;
-      case "N1_2":
-        setN1_2(N1_2+1)
+      case "n1_2":
+        setn1_2(n1_2+1)
         break;
-      case "R1_2":
-        setR1_2(R1_2+1)
+      case "r1_2":
+        setr1_2(r1_2+1)
         break;
-      case "C1_2":
-        setC1_2(C1_2+1)
+      case "c1_2":
+        setc1_2(c1_2+1)
         break;
-      case "ApoioG_2":
-        setApoioG_2(ApoioG_2+1)
+      case "apoiog_2":
+        setapoiog_2(apoiog_2+1)
         break;
-      case "B2_1":
-        setB2_1(B2_1+1)
+      case "b2_1":
+        setb2_1(b2_1+1)
         break;
-      case "apoioN_1":
-        setapoioN_1(apoioN_1+1)
+      case "apoion_1":
+        setapoion_1(apoion_1+1)
         break;
-      case "F1_2":
-        setF1_2(F1_2+1)
+      case "f1_2":
+        setf1_2(f1_2+1)
         break;
-      case "apoioL_2":
-        setapoioL_2(apoioL_2+1)
+        case "apoiol_2tela31":
+        setapoiol_2tela31(apoiol_2tela31+1)
         break;
-      case "H1_2":
-        setH1_2(H1_2+1)
+      case "h1_2":
+        seth1_2(h1_2+1)
         break;
-      case "apoioC_2Tela32":
-        setapoioC_2Tela32(apoioC_2Tela32+1)
+      case "apoioc_2tela32":
+        setapoioc_2tela32(apoioc_2tela32+1)
         break;
-      case "L1_2":
-        setL1_2(L1_2+1)
+      case "l1_2":
+        setl1_2(l1_2+1)
         break;
-      case "K1_2Tela33":
-        setK1_2Tela33(K1_2Tela33+1)
+      case "k1_2tela33":
+        setk1_2tela33(k1_2tela33+1)
         break;
-      case "GH2_1":
-        setGH2_1(GH2_1+1)
+      case "gh2_1":
+        setgh2_1(gh2_1+1)
         break;
-      case "apoioA_1":
-        setapoioA_1(apoioA_1+1)
+      case "apoioa_1tela34":
+        setapoioa_1tela34(apoioa_1tela34+1)
         break;
-      case "A2_1":
-        setA2_1(A2_1+1)
+      case "a2_1":
+        seta2_1(a2_1+1)
         break;
-      case "apoioC_1Tela35":
-        setapoioC_1Tela35(apoioC_1Tela35+1)
+      case "apoioc_1tela35":
+        setapoioc_1tela35(apoioc_1tela35+1)
         break;
-      case "D2_2":
-        setD2_2(D2_2+1)
+      case "d2_2":
+        setd2_2(d2_2+1)
         break;
-      case "apoioB_2":
-        setapoioB_2(apoioB_2+1)
+      case "apoiob_2":
+        setapoiob_2(apoiob_2+1)
         break;
-      case "O2_2":
-        setO2_2(O2_2+1)
+      case "o2_2":
+        seto2_2(o2_2+1)
         break;
-      case "apoioS_2Tela37":
-        setapoioS_2Tela37(apoioS_2Tela37+1)
+      case "apoios_2tela37":
+        setapoios_2tela37(apoios_2tela37+1)
         break;
-      case "C1_1":
-        setC1_1(C1_1+1)
+      case "c1_1":
+        setc1_1(c1_1+1)
         break;
-      case "D2_1Tela38":
-        setD2_1Tela38(D2_1Tela38+1)
+      case "d2_1tela38":
+        setd2_1tela38(d2_1tela38+1)
         break;
-      case "B1_1":
-        setB1_1(B1_1+1)
+      case "b1_1":
+        setb1_1(b1_1+1)
         break;
-      case "apoioN_1Tela39":
-        setapoioN_1Tela39(apoioN_1Tela39+1)
+      case "apoion_1tela39":
+        setapoion_1tela39(apoion_1tela39+1)
         break;
-      case "E1_2Tela40":
-        setE1_2Tela40(E1_2Tela40+1)
+      case "e1_2tela40":
+        sete1_2tela40(e1_2tela40+1)
         break;
-      case "F2_2":
-        setF2_2(F2_2+1)
+      case "apoioi_2":
+        setapoioi_2(apoioi_2+1)
         break;
-      case "apoioL_2Tela41":
-        setapoioL_2Tela41(apoioL_2Tela41+1)
+      case "f2_2":
+        setf2_2(f2_2+1)
         break;
-      case "M1_2":
-        setM1_2(M1_2+1)
+      case "apoiol_2tela41":
+        setapoiol_2tela41(apoiol_2tela41+1)
         break;
-      case "apoioK_2":
-        setapoioK_2(apoioK_2+1)
+      case "m1_2":
+        setm1_2(m1_2+1)
         break;
-      case "E1_1":
-        setE1_1(E1_1+1)
+      case "apoiok_2":
+        setapoiok_2(apoiok_2+1)
         break;
-      case "apoioG_1Tela43":
-        setapoioG_1Tela43(apoioG_1Tela43+1)
+      case "e1_1":
+        sete1_1(e1_1+1)
         break;
-      case "O1_1":
-        setO1_1(O1_1+1)
+      case "apoiog_1tela43":
+        setapoiog_1tela43(apoiog_1tela43+1)
         break;
-      case "apoioJ_1Tela44":
-        setapoioJ_1Tela44(apoioJ_1Tela44+1)
+      case "o1_1":
+        seto1_1(o1_1+1)
         break;
-      case "W1_1":
-        setW1_1(W1_1+1)
+      case "apoioj_1tela44":
+        setapoioj_1tela44(apoioj_1tela44+1)
         break;
-      case "apoioL_1Tela45":
-        setapoioL_1Tela45(apoioL_1Tela45+1)
+      case "w1_1":
+        setw1_1(w1_1+1)
         break;
-      case "apoioH_1":
-        setapoioH_1(apoioH_1+1)
+      case "apoiol_1tela45":
+        setapoiol_1tela45(apoiol_1tela45+1)
         break;
-      case "MN2_1":
-        setMN2_1(MN2_1+1)
+      case "apoioh_1":
+        setapoioh_1(apoioh_1+1)
         break;
-      case "apoioB_1Tela47":
-        setapoioB_1Tela47(apoioB_1Tela47+1)
+      case "g2_1":
+        setg2_1(g2_1+1)
         break;
-      case "IJ2_1":
-        setIJ2_1(IJ2_1+1)
+      case "mn2_1":
+        setmn2_1(mn2_1+1)
         break;
-      case "apoioM_1Tela48":
-        setapoioM_1Tela48(apoioM_1Tela48+1)
+      case "apoiob_1tela47":
+        setapoiob_1tela47(apoiob_1tela47+1)
         break;
-      case "D1_2":
-        setD1_2(D1_2+1)
+      case "ij2_1":
+        setij2_1(ij2_1+1)
         break;
-      case "apoioB_2Tela49":
-        setapoioB_2Tela49(apoioB_2Tela49+1)
+      case "apoiom_1tela48":
+        setapoiom_1tela48(apoiom_1tela48+1)
         break;
-      case "G2_2":
-        setG2_2(G2_2+1)
+      case "d1_2":
+        setd1_2(d1_2+1)
         break;
-      case "apoioN_2Tela50":
-        setapoioN_2Tela50(apoioN_2Tela50+1)
+      case "apoiob_2tela49":
+        setapoiob_2tela49(apoiob_2tela49+1)
         break;
-      case "J1_2":
-        setJ1_2(J1_2+1)
+      case "g2_2":
+        setg2_2(g2_2+1)
         break;
-      case "K2_2":
-        setK2_2(K2_2+1)
+      case "apoion_2tela50":
+        setapoion_2tela50(apoion_2tela50+1)
         break;
-      case "M2_2":
-        setM2_2(M2_2+1)
+      case "j1_2":
+        setj1_2(j1_2+1)
         break;
-      case "apoioK_2Tela52":
-        setapoioK_2Tela52(apoioK_2Tela52+1)
+      case "k2_2":
+        setk2_2(k2_2+1)
         break;
-      case "T1_2":
-        setT1_2(T1_2+1)
+      case "m2_2":
+        setm2_2(m2_2+1)
         break;
-      case "apoioH_2Tela53":
-        setapoioH_2Tela53(apoioH_2Tela53+1)
+      case "apoiok_2tela52":
+        setapoiok_2tela52(apoiok_2tela52+1)
         break;
-      case "U1_2":
-        setU1_2(U1_2+1)
+      case "t1_2":
+        sett1_2(t1_2+1)
         break;
-      case "apoioQ_1":
-        setapoioQ_1(apoioQ_1+1)
+      case "apoioh_2tela53":
+        setapoioh_2tela53(apoioh_2tela53+1)
         break;
-      case "F1_1":
-        setF1_1(F1_1+1)
+      case "u1_2":
+        setu1_2(u1_2+1)
         break;
-      case "M1_1Tela55":
-        setM1_1Tela55(M1_1Tela55+1)
+      case "apoioq_1":
+        setapoioq_1(apoioq_1+1)
         break;
-      case "Z1_1":
-        setZ1_1(Z1_1+1)
+      case "f1_1":
+        setf1_1(f1_1+1)
         break;
-      case "apoioI_1":
-        setapoioI_1(apoioI_1+1)
+      case "m1_1tela55":
+        setm1_1tela55(m1_1tela55+1)
         break;
-      case "J2_2":
-        setJ2_2(J2_2+1)
+      case "z1_1":
+        setz1_1(z1_1+1)
         break;
-      case "K2_2Tela57":
-        setK2_2Tela57(K2_2Tela57+1)
+      case "apoioi_1":
+        setapoioi_1(apoioi_1+1)
         break;
-      case "U2_2":
-        setU2_2(U2_2+1)
+      case "j2_2":
+        setj2_2(j2_2+1)
         break;
-      case "apoioQ_1Tela58":
-        setapoioQ_1Tela58(apoioQ_1Tela58+1)
+      case "k2_2tela57":
+        setk2_2tela57(k2_2tela57+1)
         break;
-      case "CD2_1":
-        setCD2_1(CD2_1+1)
+      case "u2_2":
+        setu2_2(u2_2+1)
         break;
-      case "apoioK_1Tela59":
-        setapoioK_1Tela59(apoioK_1Tela59+1)
+      case "apoioq_1tela58":
+        setapoioq_1tela58(apoioq_1tela58+1)
         break;
-      case "Z2_1":
-        setZ2_1(Z2_1+1)
+      case "cd2_1":
+        setcd2_1(cd2_1+1)
         break;
-      case "apoioI_1Tela60":
-        setapoioI_1Tela60(apoioI_1Tela60+1)
+      case "apoiok_1tela59":
+        setapoiok_1tela59(apoiok_1tela59+1)
         break;
+      case "z2_1":
+        setz2_1(z2_1+1)
+        break;
+      case "apoioi_1tela60":
+        setapoioi_1tela60(apoioi_1tela60+1)
+        break; 
       
     }
 
@@ -1170,7 +1254,7 @@ if (end) {
     if (snapshot.exists()) {
 
     } else {
-      gravar(userlog.uid,A1_2,apoioF_2,apoioA_1,GH1_1,apoiol_2,E1_2,K1_2,L2_2,apoioU_2,Q2_2,apoioH_2,T2_2,R1_apoio_1,M1_1,apoioL_1,W2_1,apoioK_1,CD1_1,Q2_2Tela10,G1_1,Q2_1,R1_1,D1_1,S2_2,N2_2,apoioG_2Tela14,C2_2,A1_1,apoioC_1,apoioN_2,G1_2,apoioC_2,H2_2,apoioS_2,O1_2,apoioU_2Tela19,Q1_2,C2_1,D2_1,apoioG_1,E2_1,apoioJ_1,O2_1,MN1_1,apoioB_1,Q1_1,R1_1,IJ1_1,apoioM_1,A2_2,apoioF_2Tela26,S1_2,D1_1Tela27,N1_2,R1_2,C1_2,apoioG_2,B2_1,apoioN_1,F1_2,apoioL_2,H1_2,apoioC_2Tela32,L1_2,K1_2Tela33,GH2_1,apoioA_1,A2_1,apoioC_1Tela35,D2_2,apoioB_2,O2_2,apoioS_2Tela37,C1_1,D2_1Tela38,B1_1,apoioN_1Tela39,E1_2Tela40,apoioI_2,F2_2,apoioL_2Tela41,M1_2,apoioK_2,E1_1,apoioG_1Tela43,O1_1,apoioJ_1Tela44,W1_1,apoioL_1Tela45,G2_1,apoioH_1,MN2_1,apoioB_1Tela47,IJ2_1,apoioM_1Tela48,D1_2,apoioB_2Tela49,G2_2,apoioN_2Tela50,J1_2,K2_2,M2_2,apoioK_2Tela52,T1_2,apoioH_2Tela53,U1_2,apoioQ_1,F1_1,M1_1Tela55,Z1_1,apoioI_1,J2_2,K2_2,U2_2,apoioQ_1Tela58,CD2_1,apoioK_1Tela59,Z2_1,apoioI_1Tela60)
+      gravar(userlog.uid,a1_2,apoiof_2,apoioa_1,gh1_1,apoiol_2,e1_2,k1_2,l2_2,apoiou_2,q2_2,apoioh_2,t2_2,r1_apoio_1,m1_1,apoiol_1,w2_1,apoiok_1,cd1_1,apoioh_1tela10,g1_1,q2_1,r1_1,d1_1,s2_2,n2_2,apoiog_2tela14,c2_2,a1_1,apoioc_1,apoion_2,g1_2,apoioc_2,h2_2,apoios_2,o1_2,apoiou_2tela19,q1_2,c2_1,d2_1,apoiog_1,e2_1,apoioj_1,o2_1,mn1_1,apoiob_1,q1_1,r1_1tela24,ij1_1,apoiom_1,a2_2,apoiof_2tela26,s1_2,d1_1tela27,n1_2,r1_2,c1_2,apoiog_2,b2_1,apoion_1,f1_2,apoiol_2tela31,apoiol_2,h1_2,apoioc_2tela32,l1_2,k1_2tela33,gh2_1,apoioa_1tela34,a2_1,apoioc_1tela35,d2_2,apoiob_2,o2_2,apoios_2tela37,c1_1,d2_1tela38,b1_1,apoion_1tela39,e1_2tela40,apoioi_2,f2_2,apoiol_2tela41,m1_2,apoiok_2,e1_1,apoiog_1tela43,o1_1,apoioj_1tela44,w1_1,apoiol_1tela45,g2_1,apoioh_1,mn2_1,apoiob_1tela47,ij2_1,apoiom_1tela48,d1_2,apoiob_2tela49,g2_2,apoion_2tela50,j1_2,k2_2,m2_2,apoiok_2tela52,t1_2,apoioh_2tela53,u1_2,apoioq_1,f1_1,m1_1tela55,z1_1,apoioi_1,j2_2,k2_2,u2_2,apoioq_1tela58,cd2_1,apoiok_1tela59,z2_1,apoioi_1tela60)
     }
   }).catch((error) => {
     console.error(error);
@@ -1191,12 +1275,12 @@ if (end) {
               </div>
             </div>
             <div className="answer-section">
-            {questions[currentQuestion].answerOptions.map(
-                (answerOption) => (
+            {questions[currentQuestion].answeroptions.map(
+                (answeroption) => (
                   <button
-                    onClick={() => handleAnswer(answerOption.id_image)}
+                    onClick={() => handleAnswer(answeroption.id_image)}
                   >
-                    {answerOption.image}
+                    {answeroption.image}
                   </button>
                 )
             )}
