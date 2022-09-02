@@ -286,13 +286,6 @@ const questions = [
   },
   {
     answeroptions: [
-      {image: <img src= {apoiog_2}/>,id_image:"apoiog_2"},
-      {image: <img src= {c1_2}/>, id_image:"c1_2"}
-     
-    ],
-  },
-  {
-    answeroptions: [
       {image: <img src= {a1_1}/>,id_image:"a1_1"},
       {image: <img src= {apoioc_1}/>, id_image:"apoioc_1"}
      
